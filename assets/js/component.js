@@ -41,8 +41,8 @@ class Component{
 	style_generated = false;
 	script_generated = false;
 
-	style_element;
-	script_text;
+	style_element = [];
+	script_text = [];
 	dom_element;
 	static all_components = {};
 	
@@ -113,17 +113,20 @@ class Component{
 		return dom_element;
 	}
 	generateScript(){
-		if(!this.script_generated && this.script_text){
-			let script_element = document.createElement('script');
-			script_element.textContent = this.script_text;
-			document.head.appendChild(script_element)
+		if(!this.script_generated && this.script_text.length > 0){
+			for (var script_text of this.script_text){
+				let script_element = document.createElement('script');
+				script_element.textContent = script_text;
+				document.head.appendChild(script_element)
+			}
 			this.script_generated = true;
 		}		
 	}
 
 	generateStyle(){
-		if(!this.style_generated && this.style_element) {
-			document.head.appendChild(this.style_element);
+		if(!this.style_generated && this.style_element.length > 0) {
+			for (var st_el of this.style_element)
+				document.head.appendChild(st_el);
 			this.style_generated = true;
 		}
 	}
@@ -132,8 +135,8 @@ class Component{
 		if(!this.errorExists()){
 			let dom_elements = getHtml(this.getMustacheDatas()), dom_element;
 			for(let element_0 of dom_elements){
-				if(element_0.tagName == 'STYLE') this.style_element = element_0;
-				else if(element_0.tagName == 'SCRIPT') this.script_text = element_0.textContent;
+				if(element_0.tagName == 'STYLE') this.style_element.push(element_0);
+				else if(element_0.tagName == 'SCRIPT') this.script_text.push(element_0.textContent);
 				else dom_element = element_0;
 			}
 
