@@ -1,3 +1,6 @@
+function preg_quote(str) {
+	return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
 function getHtml(str, first, attributes) {
 	var res = document.createElement('div');
 	if((typeof str) == 'string')
@@ -10,22 +13,45 @@ function getHtml(str, first, attributes) {
 		return el;
 	})(res.firstChild, attributes) : res.children;
 }
-function mustache(text, datas, regexp, key_result_done_callback, def_val){
+function mustache(text, datas, regexp, cl, def_val, func){
 	regexp = regexp ?? /\{\{([^}]+)\}\}/g, error = false;
 	let replaceCall = (match, key) => {
-		key = key.trim();
+		key = (key.trim()).replace(new RegExp(preg_quote('\\:'), 'g'), () => '#![]9&!');
 		let key_sep = key.split(':'), key_ = key_sep[0], default_value = key_sep[1] ?? def_val;
-		if(datas.hasOwnProperty(key_) || (default_value || def_val === "")){
+		if(func === false) default_value = key_sep[1] ? key_sep.splice(1).join(':') : def_val;
+		if(datas.hasOwnProperty(key_) || (default_value || default_value === "")){
 			let val = datas[key_] ?? default_value;
-			return key_result_done_callback ? key_result_done_callback(val, match, key_, key_sep, default_value) : val;
+			if(key_sep[2] && (func === undefined || func === true)){
+				var t = key_sep[2].match(/^([a-z])\|/i);
+				if(t && t.length == 2){
+					// alert('ss')
+					if(t[1] == 'i'){
+						const regex = new RegExp(preg_quote('['+key_+']'), 'g');
+						const code = (key_sep[2].replace(/^[a-z]\|/i, '')).replace(regex, (m, k) => 'datas["' + key_ + '"]');
+						try{
+							var resp;
+							eval('resp = ' + code + ' ? true : false;');
+							if(resp) return cl && cl.key_result_done_callback ? cl.key_result_done_callback(val, match, key_, key_sep, default_value, [t[1], resp]) : val;
+						}
+						catch(error){
+							cl.addError(error);
+							console.error(match, error);
+						}
+					}
+				}
+				else console.error([match, key_sep[2], datas, text]);
+				return '';
+			}
+			else return cl && cl.key_result_done_callback ? cl.key_result_done_callback(val, match, key_, key_sep, default_value) : val;
 		}
 		else{
 			console.error("L'élément `" + key_ + "` n'a pas été trouvé parmis les données ", datas)
+			cl.addError(["L'élément `" + key_ + "` n'a pas été trouvé parmis les données ", datas]);
 			error = true;
 		}
 		return match;
 	};
-	let val = text.replace(regexp, replaceCall);
+	let val = text.replace(regexp, replaceCall).replace(new RegExp(preg_quote('#![]9&!'), 'g'), () => ':');
 	return error ? false : val;
 }
 class Component{
@@ -33,14 +59,16 @@ class Component{
 	tentative = 4;
 	response;
 	datas;
-	error;
+	error = [];
 	element;
 	url;
 
 	cache = true;
+	link_generated = false;
 	style_generated = false;
 	script_generated = false;
 
+	link_element = [];
 	style_element = [];
 	script_text = [];
 	dom_element;
@@ -74,6 +102,7 @@ class Component{
 						Component.all_components[this.url] = {'response' : response, generate: (key) => {
 							if(key && (!(Component.all_components[key]) || !(Component.all_components[key]['generated']))){
 								Component.all_components[key] = {...Component.all_components[key], 'generated' : true};
+								this.generateLink();
 								this.generateStyle();
 								this.generateScript();
 							}
@@ -87,7 +116,7 @@ class Component{
 					})
 					.catch(error => {
 						this.datas = null;
-						this.error = error;
+						this.error.push(error);
 					});
 					if(this.datas !== undefined) break;
 				}
@@ -131,11 +160,20 @@ class Component{
 		}
 	}
 
+	generateLink(){
+		if(!this.link_generated && this.link_element.length > 0) {
+			for (var st_el of this.link_element)
+				document.head.appendChild(st_el);
+			this.link_generated = true;
+		}
+	}
+
 	generate(){
 		if(!this.errorExists()){
 			let dom_elements = getHtml(this.getMustacheDatas()), dom_element;
 			for(let element_0 of dom_elements){
-				if(element_0.tagName == 'STYLE') this.style_element.push(element_0);
+				if(element_0.tagName == 'LINK') this.link_element.push(element_0);
+				else if(element_0.tagName == 'STYLE') this.style_element.push(element_0);
 				else if(element_0.tagName == 'SCRIPT') this.script_text.push(element_0.textContent);
 				else dom_element = element_0;
 			}
@@ -150,8 +188,8 @@ class Component{
 		else console.error(this.getError());
 	}
 
-	key_result_done_callback(val, match, key, key_sep, default_value){
-		return val;
+	key_result_done_callback(val, match, key, key_sep, default_value, condition){
+		return condition ? (condition[0] == 'i' ? (condition[1] ? default_value : '') : val) : val;
 	}
 	
 	getResult(){ return this.result; }
@@ -184,37 +222,46 @@ class Component{
 		try{
 			let datas = this.getDatasElement(), val, slots = this.getSlotsElement();
 			
-			let dts = mustache(this.datas, slots, /\@\{([^}]+)\}/g, null, "");
+			let dts = mustache(this.datas, slots, /\@\[\-\-([^\]]+)\-\-\]/g, this, "", false);
 
-			if(val = mustache(dts, datas, null, this.key_result_done_callback)){
+			if(val = mustache(dts, datas, null, this)){
 				return val;
 			}
 			else throw new Error();
 		}
 		catch(error){
-			console.error("\tErreur Composant : " + this.url, datas, error);
+			console.error("\tErreur Composant : " + this.url, this.datas, error);
 		}
 		return this.datas;
 	}
 	getResponse(){ return this.response; }
 
 	getError(){ return this.error; }
-	errorExists(){ return this.error ? true : false; }
+	addError(error){ this.error.push(error); }
+	errorExists(){ return this.error.length > 0 ? true : false; }
 }
 
+async function loadComponent(){
 
-if(window.location.origin != "null") {
+	var all_components = document.querySelectorAll('[c-file]');
 
-	document.addEventListener('DOMContentLoaded', async () => {
+	for (let element of all_components) {
 
+		var component = new Component(element, element.getAttribute('c-file'));
 
-		var all_components = document.querySelectorAll('[c-file]');
+		await component.exec();
 
-		for (let element of all_components) {
-
-			var component = new Component(element, element.getAttribute('c-file'));
-
-			await component.exec();
+		if(component.errorExists()){
+			console.error(component.getError());
+			// console.log(element.parentNode)
+			element.innerHTML = '<div class="tw-inline-block tw-bg-red-400 tw-px-4 tw-py-2 ff-jost-medium tw-rounded-md">Un problème sur l\'appel du composant : ' + element.getAttribute('c-file') + '</div>';
+			element.removeAttribute('c-file');
+			// console.error('Composant : ');
+			// console.error(component.getError());
+			// element.remove();
+			continue;
+		}
+		else {
 
 			let multiple = element.getAttribute('c-multiple') && Object.keys(component.getDatasElement()).length > 0 ? element.getAttribute('c-multiple') : false;
 			if(multiple){
@@ -244,13 +291,21 @@ if(window.location.origin != "null") {
 
 			// component.generateStyle();
 			// component.generateScript();
-
 		}
+	}
 
-		for(let key in Component.all_components) {
-			Component.all_components[key].generate();
+	for(let key in Component.all_components) {
+		Component.all_components[key].generate();
+	}
+
+}
+if(window.location.origin != "null") {
+
+	document.addEventListener('DOMContentLoaded', async () => {
+		var t = 0;
+		while(document.querySelectorAll('[c-file]').length > 0){
+			await loadComponent();
 		}
-
 	});
 
 }
