@@ -1,0 +1,68 @@
+<div class="component-banner-op-ew29 {{padding:tw-px-6}} md:tw-flex tw-items-center tw-space-x-4">
+	<div class="md:tw-w-1/2 tw-space-y-4 md:tw-space-y-7 tw-relative zi-2 tw-flex tw-flex-col tw-items-center md:tw-items-start tw-text-center md:tw-text-left">
+		<h1 class="ff-jost-bold tw-text-3xl md:tw-text-4xl tw-w-10/12">{{title}}</h1>
+		<p class="ff-jost text-base md:text-lg">{{description}}</p>
+		<div class="tw-flex tw-space-x-4">
+			@[--button--]
+		</div>
+	</div>
+	<div class="icon-content-e29 tw-w-full tw-mt-10 md:tw-mt-0 tw-flex-1 tw-flex tw-justify-center tw-self-stretch tw-relative zi-1">
+		<div class="tw-w-full">
+			@[--icon--]
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	.component-banner-op-ew29 svg { transition: all .3s; }
+	.component-banner-op-ew29 svg pattern{}
+	.component-banner-op-ew29 svg pattern > image{ transition: all 3s; }
+	.component-banner-op-ew29:hover svg pattern > image{
+/*		transform: rotate(10deg) scale(1.1);*/
+	}
+
+	.icon-content-e29{ height: 60vh; }
+	@media (min-width: 768px) {
+		main:hover .component-banner-op-ew29 svg{
+			transform: rotate(10deg) scale(.6) translateX(-40%);
+		}
+		main:hover .component-banner-op-ew29 svg:last-child{
+			transform: rotate(-10deg) scale(.6) translateX(40%);
+		}
+		.icon-content-e29{
+			min-height: 60vh;
+			height: auto;
+		}
+	}
+</style>
+
+<!-- 
+EXEMPLE D'UTILISATION
+
+
+				<div class="tw-bg-red-400- container" c-file="components/banners/banner-op.html">
+					<div id="datas">
+						{
+							"title" : "Laissez le vent donner des ailes à votre valise",
+							"description" : "Embarquez pour un voyage empreint de légèreté et de liberté avec notre bannière de vent de valise. Lorsque le vent caresse votre bagage, il lui insuffle la magie du voyage. Suivez les courants aériens vers des destinations fascinantes et laissez-vous porter par l'excitation de l'inconnu.",
+							"image" : "/assets/img/30/american-green-travel-ji5XMfO3dXY-unsplash.jpg"
+						}
+					</div>
+					<div c-slot="icon">
+						<div class="tw-w-full tw-h-full tw-relative zi-1">
+							<svg class="tw-absolute tw-top-0 tw-bottom-0 tw-my-auto tw-h-full tw-w-full" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 690">
+								<pattern id="myPattern" width="100%" height="100%" patternContentUnits="objectBoundingBox"><image xlink:href="/assets/img/30/american-green-travel-ji5XMfO3dXY-unsplash.jpg" width="1" height="1" preserveAspectRatio="xMidYMid slice"></image></pattern>
+								<path d="M334.07,5.51C147.29,15.75-17.67,187,12.87,288.21,38.78,374.15,196,378.12,201.05,449.07,207,531.89-3.94,572.26,5.29,622.3c13.29,72,477,135,638.1-40.92,17.73-19.38,57.69-63,50.83-115.18-10-75.9-107.73-83-139.52-167.52-33-87.81,51.33-136.45,15.14-205.6C534.14,24.87,414.83,1.09,334.07,5.51Z" transform="translate(-5 -5)" fill="url(#myPattern)"/>
+							</svg>
+							<svg class="tw-absolute tw-top-0 tw-bottom-0 tw-my-auto tw-h-full tw-w-full" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 690">
+								<pattern id="myPattern0" width="100%" height="100%" patternContentUnits="objectBoundingBox"><image xlink:href="/assets/img/30/jefferson-sees-KyeqngdgbC8-unsplash.jpg" width="1" height="1" preserveAspectRatio="xMidYMid slice"></image></pattern>
+								<path d="M17.88,52.5C62.65-9.08,225.22-11.34,332.74,49c93.31,52.35,94.94,123.65,178,136.58,66.36,10.33,98.35-30.08,136.9-9.69C697.85,202.44,714,308.4,667.15,379.42c-62.31,94.44-198.44,70.09-236.63,160.38-22.62,53.49,16.28,83-10.75,116.31C368.67,719,154.2,706.3,89.26,612.94,25.33,521,161,429.49,92.2,298.35,63.56,243.79,11.92,206,6.15,123,4.32,96.62,2.7,73.38,17.88,52.5Z" transform="translate(-5 -5)" fill="url(#myPattern0)"/>
+							</svg>
+						</div>
+					</div>
+					<div c-slot="button">
+						<br c-file="components/buttons/sample.html" datas='{"title" : "Test", "link" : 33}'/>
+						<br c-file="components/buttons/sample.html" datas='{"type" : 1, "title" : "Test", "link" : 33}'/>
+					</div>
+				</div>
+
+ -->
