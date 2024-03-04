@@ -1,0 +1,18 @@
+hr{
+    background-color: #fff;
+    height: 2px;
+    width: 50%;
+    margin-left: 0;
+    font-weight: bold;
+}
+h1{
+    writing-mode: vertical-rl;
+    font-size: 70px;
+    transition: rotate(180deg);
+    
+}
+img{
+    max-width: 98px;
+    max-height: 110px;
+    margin-left: -65px;
+}
