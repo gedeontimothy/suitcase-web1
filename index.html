@@ -15,18 +15,20 @@
 		<title>Bienvenu Suitcase</title>
 	</head>
 	<body>
-	<var class="navbar navbar-expand-md navbar-light bg-light ">
-		<div class="container">
-			<a class="navbar-brand" href="#"><img src="///png.icons8.com/bag/Doodle/1" alt=""><span style="font-size: 1.8em; font-family: serif; color: blue;">Valises</span></a>
-			<button onclick="alert('salut');"  class="navbar-toggler" type="button" 
+	<div class="navbar navbar-expand-md navbar-light bg-light " id="principalDiv">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img src="///png.icons8.com/bag/Doodle/1" alt=""><span style="font-size: 1.8em; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: blue;"><img src="bag_40px.png" alt="">Valises</span></a>
+			<button onclick="alert('salut');"  class="navbar-toggler  pull-right" type="button" 
 			data-toggle="collapse"
 			data-target="#navbarNav"
 			aria-controls="navbarNav"
 			aria-expanded="true"
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
+			<div class="col-sm-1"></div>
 			
 		    </button>
+			<div class="col-lg-1"></div>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item active"><a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a></li>
@@ -37,6 +39,7 @@
 				
 					<li class="nav-item active"><a class="nav-link" href="#">Contact</a></li>
 				</ul>
+				<div class="col-lg-4"></div>
 				<div class="navbar-expand-sm" style="border: solid 1px black;">
 					<img src="search_32px.png" alt="icon" style="border: solid 1px black;">
 				    <input class="text" type="text" placeholder="Rechercher">
@@ -45,7 +48,7 @@
 				
 			</div>
 		</div>
-	</var>
+	</div>
 	
 
 		
@@ -54,15 +57,16 @@
 	<style>
 		li{
 			font-size: 1.3em;
-			font-family: serif;
+			font-family:Georgia, 'Times New Roman', Times, serif;
 		}
 		a:hover{
-			background-color: rgba(0, 0, 0, 0.397) ;
+			background-color :rgba(0, 0, 255, 0.267) ;
 			border-radius: 5px;
 		}
 		
-		var{
+		#principalDiv{
 			border: solid 1px black;
+			
 		}
 		
 	</style>
