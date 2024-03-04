@@ -1,26 +1,31 @@
-<main class="layout-main-29hd tw-w-screen tw-h-screen tw-p-7 tw-relative z-1 tw-flex" data-menu-type="{{menu-type:fixed}}">
-	<div class="main-content-28h tw-flex tw-h-full tw-w-full tw-flex-col tw-flex-1 tw-transition-all tw-duration-500">
-		<div class="suitcase-bg-color-light-25 suitcase-bg-color-opacity-95 suitcase-bg-color-light-35 tw-rounded-2xl tw-mb-5" style="min-height: 10px;">
-			<div class="">
-				@[--head--]
-			</div>
-		</div>
-		<div class="tw-h-full suitcase-bg-color-light-35 suitcase-bg-color-opacity-95 tw-rounded-2xl tw-overflow-hidden tw-relative">
-			<div class="tw-h-full tw-w-full tw-overflow-y-auto">
+<main class="layout-main-29hd tw-w-screen tw-h-screen tw-p-2 md:tw-p-4 lg:tw-p-7 xl:tw-p-10 tw-relative zi-1 tw-flex" data-menu-type="{{menu-type:fixed}}">
+	<div class="main-content-28h tw-flex tw-h-full tw-w-full tw-flex-col tw-flex-1 tw-transition-all tw-duration-500 relative zi-1">
+		<div class="tw-h-full suitcase-bg-color-light-35 tw-rounded-2xl tw-overflow-hidden tw-relative zi-1">
+			<div class="tw-h-full tw-w-full tw-overflow-y-auto tw-relative zi-1">
+				<div class="tw-mb-5- tw-p-5">
+					<div class="bg-color-black bg-color-opacity-10 tw-rounded-2xl" style="min-height: 10px;">
+						<button onclick="layout_main_toggle_menu()">ss</button>
+						@[--head--]
+					</div>
+				</div>
 				@[--body--]
+			</div>
+			<div class="tw-w-full tw-h-full tw-overflow-hidden tw-flex tw-absolute tw-top-0 tw-left-0 -zi-1">
+				<div class="bck-ew92 tw-bg-center tw-bg-cover tw-bg-no-repeat" style="background-image: url({{image}});filter: blur(50px) brightness(.9);">a</div>
+				<div class="bck-ew92 tw-border-2 border-color-white border-color-opacity-60" style="box-shadow: inset 0 0px 7px 3px hsla(0, 100%, 100%, .5);"></div>
 			</div>
 		</div>
 	</div>
 	<div data-state="0" class="menu-e82 tw-flex
 		{{menu-type:tw-w-full:i|![menu-type] || [menu-type] == 'fixed'}}
 		{{menu-type:md\:tw-p-5 tw-w-11/12 sm\:tw-w-1/2 md\:tw-w-5/12:i|[menu-type] == 'push'}}
-	lg:tw-hidden tw-items-center tw-justify-end tw-h-full z-10 tw-transition-all tw-duration-200">
-		<div class="close-area-ww92 -z-1 tw-w-full tw-h-full bg-color-black bg-color-opacity-20 tw-absolute tw-cursor-pointer" onclick="layout_main_toggle_menu();"></div>
+		lg:tw-hidden tw-items-center tw-justify-end tw-h-full tw-transition-all tw-duration-200 tw-z-10">
+		<div class="close-area-ww92 -zi-1 tw-w-full tw-h-full bg-color-black bg-color-opacity-20 tw-absolute tw-cursor-pointer" onclick="layout_main_toggle_menu();"></div>
 		<div class="container-e29n tw-h-full tw-my-auto tw-p-3
 			{{menu-type:sm\:tw-p-4 md\:tw-p-5 tw-w-11/12 sm\:tw-w-1/2 md\:tw-w-5/12:i|![menu-type] || [menu-type] == 'fixed'}}
 			{{menu-type:sm\:tw-p-4 md\:tw-p-5 tw-w-full:i|[menu-type] == 'push'}}
 		tw-transition-all tw-duration-500">
-			<div class="tw-h-full bg-color-white tw-rounded-2xl tw-overflow-hidden">
+			<div class="tw-h-full bg-color-white bg-color-opacity-95 tw-rounded-2xl tw-overflow-hidden">
 				<div class="tw-h-full tw-w-full tw-overflow-y-auto tw-overflow-hidden">
 					<div class="">menu</div>
 					<button onclick="layout_main_toggle_menu()">Fermer menu</button>
@@ -30,6 +35,12 @@
 	</div>
 </main>
 <style type="text/css">
+	.bck-ew92{
+		width: 100%; height: 100%;
+		position: absolute;
+		left: 0; top: 0;
+		border-radius: 1rem;
+	}
 	.layout-main-29hd{}
 	.layout-main-29hd[data-menu-type="fixed"]{}
 	.layout-main-29hd[data-menu-type="push"]{}
@@ -65,6 +76,7 @@
 					e.preventDefault();
 					layout_main_toggle_menu();
 				}
+				// main_co.onclick = main_co.ontouchstart;
 				main_co.style.transform = "translateX(-" + el.offsetWidth + "px)";
 			}
 		}
@@ -72,6 +84,7 @@
 			el.setAttribute('data-state', '0');
 			if(MENU_TYPE == 'push'){
 				main_co.ontouchstart = undefined;
+				// main_co.onclick = undefined;
 				main_co.style.transform = "";
 			}
 		}
