@@ -1,0 +1,181 @@
+@font-face {
+	font-family: "Jost Black";
+	src: local("Jost Black"), url('/assets/fonts/jost/black.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Black Italic";
+	src: local("Jost Black Italic"), url('/assets/fonts/jost/black_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Bold";
+	src: local("Jost Bold"), url('/assets/fonts/jost/bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Bold Italic";
+	src: local("Jost Bold Italic"), url('/assets/fonts/jost/bold_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost ExtraBold";
+	src: local("Jost ExtraBold"), url('/assets/fonts/jost/extra_bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost ExtraBold Italic";
+	src: local("Jost ExtraBold Italic"), url('/assets/fonts/jost/extra_bold_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost ExtraLight";
+	src: local("Jost ExtraLight"), url('/assets/fonts/jost/extra_light.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost ExtraLight Italic";
+	src: local("Jost ExtraLight Italic"), url('/assets/fonts/jost/extra_light_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Italic";
+	src: local("Jost Italic"), url('/assets/fonts/jost/italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Light";
+	src: local("Jost Light"), url('/assets/fonts/jost/light.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Lightitalic";
+	src: local("Jost Lightitalic"), url('/assets/fonts/jost/lightItalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Medium";
+	src: local("Jost Medium"), url('/assets/fonts/jost/medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Medium Italic";
+	src: local("Jost Medium Italic"), url('/assets/fonts/jost/medium_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Regular";
+	src: local("Jost Regular"), url('/assets/fonts/jost/regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost SemiBold";
+	src: local("Jost SemiBold"), url('/assets/fonts/jost/semi_bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost SemiBold Italic";
+	src: local("Jost SemiBold Italic"), url('/assets/fonts/jost/semi_bold_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Thin";
+	src: local("Jost Thin"), url('/assets/fonts/jost/thin.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Jost Thin Italic";
+	src: local("Jost Thin Italic"), url('/assets/fonts/jost/thin_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Black";
+	src: local("Poppins Black"), url('/assets/fonts/poppins/black.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Black Italic";
+	src: local("Poppins Black Italic"), url('/assets/fonts/poppins/black_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Bold";
+	src: local("Poppins Bold"), url('/assets/fonts/poppins/bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Bold Italic";
+	src: local("Poppins Bold Italic"), url('/assets/fonts/poppins/bold_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins ExtraBold";
+	src: local("Poppins ExtraBold"), url('/assets/fonts/poppins/extra_bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins ExtraBold Italic";
+	src: local("Poppins ExtraBold Italic"), url('/assets/fonts/poppins/extra_bold_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins ExtraLight";
+	src: local("Poppins ExtraLight"), url('/assets/fonts/poppins/extra_light.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins ExtraLight Italic";
+	src: local("Poppins ExtraLight Italic"), url('/assets/fonts/poppins/extra_light_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Italic";
+	src: local("Poppins Italic"), url('/assets/fonts/poppins/italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Light";
+	src: local("Poppins Light"), url('/assets/fonts/poppins/light.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Lightitalic";
+	src: local("Poppins Lightitalic"), url('/assets/fonts/poppins/lightItalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Medium";
+	src: local("Poppins Medium"), url('/assets/fonts/poppins/medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Medium Italic";
+	src: local("Poppins Medium Italic"), url('/assets/fonts/poppins/medium_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Regular";
+	src: local("Poppins Regular"), url('/assets/fonts/poppins/regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins SemiBold";
+	src: local("Poppins SemiBold"), url('/assets/fonts/poppins/semi_bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins SemiBold Italic";
+	src: local("Poppins SemiBold Italic"), url('/assets/fonts/poppins/semi_bold_italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Thin";
+	src: local("Poppins Thin"), url('/assets/fonts/poppins/thin.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Poppins Thin Italic";
+	src: local("Poppins Thin Italic"), url('/assets/fonts/poppins/thin_italic.ttf') format('truetype');
+}
+
+.ff-jost-black{ font-family: 'Jost Black'; }
+.ff-jost-black-italic{ font-family: 'Jost Black Italic'; }
+.ff-jost-bold{ font-family: 'Jost Bold'; }
+.ff-jost-bold-italic{ font-family: 'Jost Bold Italic'; }
+.ff-jost-extrabold{ font-family: 'Jost ExtraBold'; }
+.ff-jost-extrabold-italic{ font-family: 'Jost ExtraBold Italic'; }
+.ff-jost-extralight{ font-family: 'Jost ExtraLight'; }
+.ff-jost-extralight-italic{ font-family: 'Jost ExtraLight Italic'; }
+.ff-jost-italic{ font-family: 'Jost Italic'; }
+.ff-jost-light{ font-family: 'Jost Light'; }
+.ff-jost-lightitalic{ font-family: 'Jost Lightitalic'; }
+.ff-jost-medium{ font-family: 'Jost Medium'; }
+.ff-jost-medium-italic{ font-family: 'Jost Medium Italic'; }
+.ff-jost{ font-family: 'Jost Regular'; }
+.ff-jost-semibold{ font-family: 'Jost SemiBold'; }
+.ff-jost-semibold-italic{ font-family: 'Jost SemiBold Italic'; }
+.ff-jost-thin{ font-family: 'Jost Thin'; }
+.ff-jost-thin-italic{ font-family: 'Jost Thin Italic'; }
+.ff-poppins-black{ font-family: 'Poppins Black'; }
+.ff-poppins-black-italic{ font-family: 'Poppins Black Italic'; }
+.ff-poppins-bold{ font-family: 'Poppins Bold'; }
+.ff-poppins-bold-italic{ font-family: 'Poppins Bold Italic'; }
+.ff-poppins-extrabold{ font-family: 'Poppins ExtraBold'; }
+.ff-poppins-extrabold-italic{ font-family: 'Poppins ExtraBold Italic'; }
+.ff-poppins-extralight{ font-family: 'Poppins ExtraLight'; }
+.ff-poppins-extralight-italic{ font-family: 'Poppins ExtraLight Italic'; }
+.ff-poppins-italic{ font-family: 'Poppins Italic'; }
+.ff-poppins-light{ font-family: 'Poppins Light'; }
+.ff-poppins-lightitalic{ font-family: 'Poppins Lightitalic'; }
+.ff-poppins-medium{ font-family: 'Poppins Medium'; }
+.ff-poppins-medium-italic{ font-family: 'Poppins Medium Italic'; }
+.ff-poppins{ font-family: 'Poppins Regular'; }
+.ff-poppins-semibold{ font-family: 'Poppins SemiBold'; }
+.ff-poppins-semibold-italic{ font-family: 'Poppins SemiBold Italic'; }
+.ff-poppins-thin{ font-family: 'Poppins Thin'; }
+.ff-poppins-thin-italic{ font-family: 'Poppins Thin Italic'; }
