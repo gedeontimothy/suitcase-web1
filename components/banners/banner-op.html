@@ -6,7 +6,7 @@
 			@[--button--]
 		</div>
 	</div>
-	<div class="icon-content-e29 tw-w-full tw-mt-10 md:tw-mt-0 tw-flex-1 tw-flex tw-justify-center tw-self-stretch tw-relative zi-1">
+	<div class="icon-content-e29 tw-w-full tw-mt-10 md:tw-mt-0 tw-flex-1 tw-flex tw-justify-center sm:tw-self-stretch tw-relative zi-1">
 		<div class="tw-w-full">
 			@[--icon--]
 		</div>
@@ -15,7 +15,7 @@
 <style type="text/css">
 	.component-banner-op-ew29 svg { transition: all .3s; }
 	.component-banner-op-ew29 svg pattern{}
-	.component-banner-op-ew29 svg pattern > image{ transition: all 3s; }
+	.component-banner-op-ew29 svg pattern > image{ transition: all 1s; }
 	.component-banner-op-ew29:hover svg pattern > image{
 /*		transform: rotate(10deg) scale(1.1);*/
 	}
@@ -28,11 +28,29 @@
 		main:hover .component-banner-op-ew29 svg:last-child{
 			transform: rotate(-10deg) scale(.6) translateX(40%);
 		}
+		main:hover .component-banner-op-ew29 .ico-d2j:hover svg{
+			transform: rotate(10deg) scale(.6) translateX(30%);
+			z-index: 100 !important;
+		}
+		main:hover .component-banner-op-ew29 .ico-d2j:hover svg:last-child{
+			transform: rotate(-10deg) scale(.6) translateX(-30%);
+		}
+
+		main:hover .component-banner-op-ew29 .ico-d2j:hover svg pattern image{
+			transform: scale(1.1);
+		}
 		.icon-content-e29{
 			min-height: 60vh;
 			height: auto;
 		}
 	}
+	@media (max-width: 340px) {
+		.icon-content-e29{
+			min-height: 40vh;
+			height: auto;
+		}
+	}
+
 </style>
 
 <!-- 
