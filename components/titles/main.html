@@ -1,0 +1,25 @@
+<div class="component-title-main-382 overflow-hidden tw-flex tw-justify-center tw-items-center" data-align="{{align:center}}">
+	<div class="ff-jost-bold tw-text-3xl tw-flex-1 text-{{align:center}}">{{title}}</div>
+</div>
+<style type="text/css">
+	.component-title-main-382{}
+	.component-title-main-382[data-align]{}
+	.component-title-main-382[data-align="center"]::before,
+	.component-title-main-382[data-align="center"]::after{
+		content: "";
+		flex: 1 1 0%;
+		height: 3px;
+		transform: scaleX(0) translateX(100%);
+		background-color: hsla(210, 60%, 87%);
+		border-radius: 5px;
+		transition: all .3s;
+	}
+
+	section:hover .component-title-main-382[data-align="center"]::before,
+	section:hover .component-title-main-382[data-align="center"]::after{
+		transform: scaleX(1);
+	}
+	.component-title-main-382[data-align="center"]::before{}
+	.component-title-main-382[data-align="left"]{}
+	.component-title-main-382[data-align="right"]{}
+</style>
