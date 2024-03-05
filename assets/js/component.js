@@ -197,6 +197,7 @@ class Component{
 	getDatasElement(){
 		let datas = {}, attr = this.element.getAttribute('datas');
 		if(attr != null && attr != ''){
+			this.element.removeAttribute('datas');
 			datas = JSON.parse(attr);
 		}
 		else{
