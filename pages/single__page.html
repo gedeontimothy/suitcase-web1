@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/css/suitcase.color.min.css">
+		<link rel="stylesheet" href="/assets/css/color.min.css">
+		<link rel="stylesheet" href="/assets/css/fonts.css">
+		<link rel="stylesheet" href="/assets/css/main.css">
+		
+		<script src="/assets/js/bootstrap.bundle.min.js"></script>
+		<script src="/assets/js/tailwind-3.4.1.js"></script>
+		<script src="/assets/js/component.js"></script>
+		
+		<title>Acceuil - Suitcase</title>
+    </head>
+    <body class="">
+		<div c-file="layouts/head-on.html" style="background-image:linear-gradient(suitcase-bg-);" datas='{"image" : "/assets/img/30/claudia-altamimi-kYSJ1xBi848-unsplash.jpg"}'>
+			<div c-slot="head">
+				<header c-file="components/navbars/nav-g.html" class="rounded bg-transparent"></header>
+			</div>
+			<div c-slot="body">
+			
+                <div c-file="components/banners/banner__8.html">
+                    <div id="datas">
+                        {
+							"title" : "Factory Hot Selling ABS Trolley",
+							"price" :"$65.00",
+							"description":"This example shows how responsive offcanvas menus work within the navbar.",
+							"description__2":"Quantite:"
+						}
+					
+					</div>
+					<span c-slot="button__2" class="tw-item-center">
+						<span c-file="components/buttons/button__3.html">
+						</span>
+						
+					</span>
+					<div c-slot="button" class="tw-item-center">
+						<br c-file="components/buttons/button__2.html" datas='{"title" : "Add to cart"}'/>
+						<br c-file="components/buttons/button__2.html" datas='{"title" : "Buy now"}'/>
+					</div>
+
+                </div>
+				<footer class="tw-mt-11" c-file="components/footers/main.html"></footer>
+			</div>
+		</div>
+	</body>
+</html>
