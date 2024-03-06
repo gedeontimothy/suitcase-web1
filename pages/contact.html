@@ -16,7 +16,11 @@
 		<title>Acceuil - Suitcase</title>
 </head>
 <body>
+    <div c-slot="head">
+        <header c-file="components/navbars/navbar_sv.html" class="rounded bg-transparent"></header>
+    </div>
     <div class="tw-mt-11" c-file="components/contact/main.html"></div>
      
+    <footer class="tw-mt-11" c-file="components/footers/main.html"></footer>
 </body>
 </html>
