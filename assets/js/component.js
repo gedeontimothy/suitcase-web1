@@ -301,6 +301,48 @@ async function loadComponent(){
 	}
 
 }
+
+function scroll_event() {
+	var els = document.querySelectorAll('[data-scroll]');
+	for(let el of els){
+		let parentScroll = el.getAttribute('data-scroll'), percent = el.hasAttribute('data-scroll-percent') ? parseInt(el.getAttribute('data-scroll-percent')) : 0;
+		parentScroll = parentScroll.trim() != '' ? parentScroll.trim() : el.parentElement;
+		if(typeof parentScroll == 'string'){
+			var ptmp = el.parentElement;
+			var i = 0;
+			while(ptmp){
+				if(ptmp.classList.contains(parentScroll) || (ptmp.tagName && ptmp.tagName.toLowerCase() == parentScroll.toLowerCase())){
+					parentScroll = ptmp;
+					break;
+				}
+				ptmp = ptmp.parentElement;
+			}
+		}
+		if(typeof parentScroll != 'string'){
+			parentScroll.addEventListener('scroll', (e) => {
+				if(el.getAttribute('data-scroll-unique') == "1") return;
+
+				let scroll_element_height = e.target.offsetHeight;
+				let p = (scroll_element_height * percent) / 100;
+				let pp = el.offsetTop - p;
+				if(e.target.scrollTop >= pp && el.getAttribute('data-scroll-active') != '1'){
+					if(el.hasAttribute('data-scroll-unique')) el.setAttribute('data-scroll-unique', "1");
+					if(el.hasAttribute('data-scroll-time')){
+						setTimeout(() => {el.setAttribute('data-scroll-active', "1")}, parseInt(el.getAttribute('data-scroll-time')));
+					}
+					else el.setAttribute('data-scroll-active', "1")
+				}
+				else if(e.target.scrollTop < pp && el.getAttribute('data-scroll-active') != '0') {
+
+					if(el.hasAttribute('data-scroll-time')){
+						setTimeout(() => {el.setAttribute('data-scroll-active', "0")}, parseInt(el.getAttribute('data-scroll-time')));
+					}
+					else el.setAttribute('data-scroll-active', "0")
+				}
+			})
+		}
+	}
+}
 if(window.location.origin != "null") {
 
 	document.addEventListener('DOMContentLoaded', async () => {
@@ -308,6 +350,7 @@ if(window.location.origin != "null") {
 		while(document.querySelectorAll('[c-file]').length > 0){
 			await loadComponent();
 		}
+		scroll_event();
 	});
 
 }
