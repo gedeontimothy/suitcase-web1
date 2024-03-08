@@ -204,6 +204,7 @@ class Component{
 			for(var el of this.element.children){
 				if(el.id && el.id == "datas")
 					datas = JSON.parse(el.textContent);
+					// datas = JSON.parse(el.innerHTML);
 			}
 		}
 		return datas;
