@@ -50,10 +50,11 @@
 	}
 </style>
 <script type="text/javascript">
-	function addBadge(call){
+	function addBadge(call, min){
 		let bdg = document.querySelector('.badge-e928');
 		let val = parseInt(bdg.getAttribute('data-value') == '' ? 0 : bdg.getAttribute('data-value')); 
-		val++;
+		if(min && val > 0) val--;
+		else val++;
 		bdg.setAttribute('data-value', val);
 		bdg.innerHTML = val;
 		if(call) call();
