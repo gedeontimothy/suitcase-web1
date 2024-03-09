@@ -1,48 +1,116 @@
 
 
-<div>
+<div class="container">
 
-<div class=" d-flex space-between offset-4">
-<span class="col-3 ">Description</span>
-<span  class="col-3 ">Quantity</span>
-<span  class="col-3 ">Price</span>
-<span  class="col-3 ">&nbsp;&nbsp;Delete</span>
-</div>
-
-
-<div class=" row d-flex flex-lg-row align-items-center g-5 py-5  "">
-    <div class="col-3 col-sm-12 col-lg-4 justify-content-center  align-items-center " style=" width=200px ;height=100px;">
-      <img src="{{image}}" class="d-block  img-fluid banner__8__img--anim " alt="Bootstrap Themes" width="200" height="100" loading="lazy" style="margin-left: 50px;">
-    </div>
-    <div class="col-lg-8 col-12 col-sm-12 row  d-flex space-between  " style="margin-top: 50px;">
-      <span class=" col-3  fs-6 mb-3 text-center " style="margin-left: -30px;">{{title:}} </span>
-     <!-- <p class="col-2 text-center fw-bold suitcase-color-dark-15" style="margin-bottom: 10px !important;">{{description:}}</p>
-      <div class=" col-2 mb-20" style="justify-content: center;
-      display: flex;
-      margin: 5%;">
-        <span class=" fw-bold" style="margin-bottom: -10px !important;">{{price:}}</span>  @[--button__2--]
-      </div>-->
-    
-      <span class="col-3"> @[--button__2--]</span>
-      <span class=" col-2 " style="margin-left: 20px;">{{price:}}</span>
-      <span class="col-4 d-flex  justify-content-center justyfy-center"><button><img src="/assets/icons/img__delete.svg" alt="x" srcset="" style="width:20px;margin-bottom:50px; "></button></span> 
-
-      <!--<p class="col-2 fs-6 fw-bold" style="text-align: center !important;">{{description__2:}}</p>
-     
-     
-      <div class=" col-2  row tw-flex tw-space-x-4" style="margin-bottom: 10px !important;
-      justify-content:center;
-      ">
-        @[--button--]
-      </div>-->
-    </div>
-    
+  <div class=" d-flex space-between offset-4  d-md-none d-sm-none none__forall">
+  <span class="col-sm-3 ">Description</span>
+  <span  class="col-sm-3 ">Quantity</span>
+  <span  class="col-sm-3 ">Price</span>
+  <span  class="col-sm-3 ">&nbsp;&nbsp;Delete</span>
   </div>
-</div>
-<style>
- .banner__8__img--anim
-  {
-     width: 30% !important;
-     overflow: hidden !important;
-  }
-</style>
+  
+  
+  <div class=" row d-flex flex-lg-row align-items-center g-5 py-5 ">
+      <div class="col-md-6   col-sm-12  col-lg-4          col-3 col-lg-4 justify-content-center  align-items-center " style=" width=200px ;height=;">
+        <img src="{{image}}" class="d-block  img-fluid banner__8__img--anim " alt="Bootstrap Themes" width="" height="100" loading="" style="margin-left: 50px;">
+      </div>
+      <div class="col-md-6  col-sm-12 sm-container  col-lg-8    col-12        row  d-flex space-between  " style="margin-top: 50px;">
+        <span class="col-md-5   col-lg-3    col-sm-12  col-3  fs-6 mb-3 text-center my__title" style="margin-left -30px;">{{title:}} </span>
+       <!-- <p class="col-2 text-center fw-bold suitcase-color-dark-15" style="margin-bottom: 10px !important;">{{description:}}</p>
+        <div class=" col-2 mb-20" style="justify-content: center;
+        display: flex;
+        margin: 5%;">
+          <span class=" fw-bold" style="margin-bottom: -10px !important;">{{price:}}</span>  @[--button__2--]
+        </div>-->
+      
+        <span class="col-md-6 col-sm-12  col-lg-3  col-3  my__btn__1"  style="margin-left: -10px;"> @[--button__2--]</span>
+        <span class="col-md-4 col-sm-12 col-2  col-lg-3 space__top  space__top--1  "  style="justify-content:center;" >{{price:}}</span>
+        <span class="col-md-2 col-sm-12 mt-md-10   col-lg-3 col-4 d-flex  space__top    space__top--2" style="justify-content:center;"><button><img src="/assets/icons/img__delete.svg" alt="x" srcset="" style="width:20px;margin-bottom:0px; "></button></span> 
+  
+        <!--<p class="col-2 fs-6 fw-bold" style="text-align: center !important;">{{description__2:}}</p>
+       
+       
+        <div class=" col-2  row tw-flex tw-space-x-4" style="margin-bottom: 10px !important;
+        justify-content:center;
+        ">
+          @[--button--]
+        </div>-->
+      </div>
+      
+    </div>
+  </div>
+  <style>
+   .banner__8__img--anim
+    {
+       width: 30% !important;
+       overflow: hidden !important;
+    }
+    @media (min-width: 768px) /*sm*/ {
+      .space__top
+      {
+        margin-top: 20px;
+        margin-left:30px;
+      
+      }
+      .banner__8__img--anim
+      {
+        width: 70%;
+      }
+  
+      }
+      @media (min-width:575px) /**/ {
+     
+      .banner__8__img--anim
+      {
+        width: 70% !important;
+      }
+      .space__top--1
+      {
+        margin-top: 10PX;
+          margin-left:165PX ;
+      }
+      
+  
+      }
+  
+      @media (max-width:575px) /**/ {
+     
+     *
+     {
+    
+     }
+     .banner__8__img--anim
+     {
+       display: none !important;
+     }
+     .space__top--1
+     {
+       width: 70%;
+       padding-top: 10px;
+     }
+     .space__top
+     {
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 30%;
+      display:none !important;
+     }
+     .my__title
+     {
+      width: 100%;
+      margin-top: -80px;
+      font-size: x-large;
+      font-weight: bold;
+     }
+     .my__btn__1
+     {
+      width: 100%;
+      margin-top: -10PX;
+     }
+    .none__forall
+    {
+      display:none !important;
+    }
+      }
+  
+  </style>
