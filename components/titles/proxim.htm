@@ -1,0 +1,39 @@
+<div class="component-title-proxim-w29jn tw-flex tw-items-center justify-between tw-space-x-3 md:tw-space-x-5" data-type="left">
+	<span class="tw-flex-1 color-white color-opacity-20"></span>
+	<h3 class="tw-text-xl md:tw-text-2xl lg:tw-text-3xl ff-poppins-black text-center suitcase-color-dark-40">{{title}}</h3>
+	<span class="tw-flex-1 color-white color-opacity-20"></span>
+</div>
+<style type="text/css">
+	.component-title-proxim-w29jn{}
+	.component-title-proxim-w29jn[data-type="center"]{}
+	.component-title-proxim-w29jn[data-type="left"]{}
+	.component-title-proxim-w29jn[data-type="right"]{}
+	
+	.component-title-proxim-w29jn[data-scroll] h3{
+		transform: scale(.7); opacity: .4;
+		transition: .5s;
+	}
+	.component-title-proxim-w29jn[data-scroll-active="1"] h3{
+		transform: scale(1); opacity: 1;
+	}
+	.component-title-proxim-w29jn span{
+		height: 4px;
+		border-radius: 10px;
+		background-color: currentColor;
+		transform: scaleX(0);
+		transition: .3s;
+		min-width: 10%;
+	}
+/*	[data-component-title-proxim-hover-active="1"]:hover .component-title-proxim-w29jn span,*/
+	.component-title-proxim-w29jn[data-scroll-active="1"] span{
+		transform: scaleX(1);
+	}
+	.component-title-proxim-w29jn[data-type="center"] span:first-child{}
+	.component-title-proxim-w29jn[data-type="center"] span:last-child{}
+	
+	.component-title-proxim-w29jn[data-type="right"] span:first-child{}
+	.component-title-proxim-w29jn[data-type="right"] span:last-child{}
+	
+	.component-title-proxim-w29jn[data-type="left"] span:first-child{}
+	.component-title-proxim-w29jn[data-type="left"] span:last-child{}
+</style>

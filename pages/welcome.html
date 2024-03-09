@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/css/suitcase.color.min.css">
+		<link rel="stylesheet" href="/assets/css/color.min.css">
+		<link rel="stylesheet" href="/assets/css/fonts.css">
+		<link rel="stylesheet" href="/assets/css/main.css">
+		
+		<script src="/assets/js/bootstrap.bundle.min.js"></script>
+		<!-- <script src="/assets/js/tailwind-plugins_forms-typography-aspect-ratio-line-clamp-3.4.1.js"></script> -->
+		<script src="/assets/js/tailwind-3.4.1.js"></script>
+		<script src="/assets/js/component.js"></script>
+		
+		<title>Bienvenu sur Suitcase</title>
+		<style type="text/css">
+			.body-2he > div:first-child > div:first-child{
+				position: relative;
+				z-index: 1;
+				overflow: hidden;
+			}
+			.body-2he > div:first-child > div:first-child::after,
+			.body-2he > div:first-child > div:first-child::before{
+				content: "";
+				position: absolute; top: 0;
+				width: 20%;
+				background-image: linear-gradient(45deg, transparent, hsla(0, 100%, 100%,.2), transparent);
+				height: 100%;
+			}
+			.body-2he > div:first-child > div:first-child::after{
+				left: 0;
+				animation: left-a 1s infinite;
+			}
+			.body-2he > div:first-child > div:first-child::before{
+				right: 0;
+				animation: right-a 1s infinite;
+			}
+			@keyframes left-a{
+				0%{left:0;}
+				100%{left:100%;}
+			}
+			@keyframes right-a{
+				0%{right:0;}
+				100%{right:100%;}
+			}
+			.svg-pattern-ed83{}
+			.svg-pattern-ed83 > svg{ position: absolute; z-index: -1; }
+			.svg-pattern-ed83 > svg:nth-child(1){ transform: translate(-25%, -25%); left: 0; top: 0; animation: opa-0 2s, opa 1.2s 2s, child-1 1s 2s ease}
+			.svg-pattern-ed83 > svg:nth-child(2){ transform: translate(25%, -25%); right: 0; top: 0; animation: opa-0 2.2s, opa 1.2s 2.2s, child-2 1s 2.2s ease}
+			.svg-pattern-ed83 > svg:nth-child(3){ transform: translate(25%, 25%); right: 0; bottom: 0; animation: opa-0 2.4s, opa 1.2s 2.4s, child-3 1s 2.4s ease}
+			.svg-pattern-ed83 > svg:nth-child(4){ transform: translate(-25%, 25%); left: 0; bottom: 0; animation: opa-0 2.6s, opa 1.2s 2.6s, child-4 1s 2.6s ease}
+
+			.content-text-d982 > div{
+				transform: scale(1);
+				animation: opa-0 2.2s, opa .5s 2.2s, text-c .5s 2.2s;
+			}
+			@keyframes text-c{
+				0%{transform: scale(1.1);}
+			}
+			@keyframes opa{
+				0%{opacity: 0;}
+				100%{opacity: 1}
+			}
+			@keyframes opa-0{
+				0%{opacity: 0}
+				100%{opacity: 0}
+			}
+			@keyframes child-1{ 0%{transform: translate(-50%, -50%);}}
+			@keyframes child-2{ 0%{transform: translate(50%, -50%);}}
+			@keyframes child-3{ 0%{transform: translate(50%, 50%);}}
+			@keyframes child-4{ 0%{transform: translate(-50%, 50%);}}
+		</style>
+	</head>
+	<body>
+		<div c-file="layouts/head-on.html" class="tw-bg-cover tw-bg-center tw-bg-no-repeat" style="background-image: url(/assets/img/original/american-green-travel-Whnjjhi8OfQ-unsplash.jpg);" datas='{"image" : "/assets/img/original/american-green-travel-Whnjjhi8OfQ-unsplash.jpg", "menu-type" : "push", "sticky" : true, "body-class" : "tw-flex tw-flex-col", "head-parent-class": "bg-color-white bg-color-opacity-10 tw-rounded-2xl"}'>
+			<div c-slot="body">
+				<div class="svg-pattern-ed83 tw-absolute -zi-1 tw-left-0 tw-top-0 tw-w-full tw-h-full tw-overflow-hidden">
+					<br class="svg-image-a-w92 tw-w-5/12 sm:tw-w-1/3 md:tw-w-1/4" c-file="assets/icons/forms/a.svg" datas='{"image" : "/assets/img/original/american-green-travel-Whnjjhi8OfQ-unsplash.jpg"}'/>
+					<br class="svg-image-c-kd2 tw-w-5/12 sm:tw-w-1/3 md:tw-w-1/4" c-file="assets/icons/forms/c.svg" datas='{"image" : "/assets/img/original/pexels-mikhail-nilov-7820692.jpg"}'/>
+					<br class="svg-image-e-92w tw-w-5/12 sm:tw-w-1/3 md:tw-w-1/4" c-file="assets/icons/forms/e.svg" datas='{"image" : "/assets/img/original/american-green-travel-ji5XMfO3dXY-unsplash.jpg"}'/>
+					<br class="svg-image-b-kjw9 tw-w-5/12 sm:tw-w-1/3 md:tw-w-1/4" c-file="assets/icons/forms/b.svg" datas='{"image" : "/assets/img/original/convertkit-iGXIjzloB2k-unsplash.jpg"}'/>
+				</div>
+				<div class="content-text-d982 tw-flex tw-items-center tw-justify-center ttw-bg-red-500 tw-flex-1 tw-overflow-hidden tw-overflow-y-auto">
+					<div class="tw-p-8 ttw-bg-green-500 tw-text-center tw-flex tw-flex-col tw-items-center tw-space-y-16 sm:tw-w-9/12 md:tw-w-8/12">
+						<h1 class="title-e2h9 tw-text-4xl md:tw-text-5xl lg:tw-text-6xl ff-poppins-bold">Suitcase - Trouvez la valise idéale en un clic</h1>
+						<p class="description-e2ne ff-jost tw-text-xl sm:tw-text-2xl">Votre partenaire de voyage et plus encore. Trouvez la valise parfaite pour tous vos déplacements. Pratique et stylée, ValiseMax vous accompagne partout.</p>
+						<div class="buttons-ed822h">
+							<br class="tw-text-base sm:tw-text-lg" c-file="components/buttons/sample.html" datas='{"title" : "Explorer notre collection", "link" : "/"}'/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			const val = {};
+			val.interval = setInterval(() => {
+				if(document.readyState == 'complete'){
+					console.log('aaaa')
+					clearInterval(val.interval);
+				}
+			});
+		</script>
+	</body>
+</html>
