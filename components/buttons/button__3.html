@@ -1,7 +1,7 @@
-<span class="btn__container" >
-    <span class="btn btn-light btn__btn" id="btn__btn-1">-</span>
-    <span class="btn btn-light  btn__btn btn__btn--midle">1</span>
-    <span class="btn btn-light  btn__btn" id="btn__btn-3"  id="btn__btn-2">+</span>
+<span class="btn__container row" >
+    <span class="btn btn-light btn__btn col-1" id="btn__btn-1">-</span>
+    <span class="btn btn-light  btn__btn btn__btn--midle col-3">1</span>
+    <span class="btn btn-light  btn__btn col-1" id="btn__btn-3"  id="btn__btn-2">+</span>
 </span>
 <style>
 .btn__btn
@@ -44,7 +44,7 @@ setTimeout(() => {
      
 }
     btn__decrement.onclick=()=>{
-        if(parseInt(result__incr.innerText)<30)
+        if(parseInt(result__incr.innerText)<10)
         {
             result__incr.innerText=parseInt(result__incr.innerText) +1
         }
