@@ -1,6 +1,15 @@
 function preg_quote(str) {
 	return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
+function parent(el, className) {
+	if(!className) return el.parentElement;
+	var par = el.parentElement;
+	while(par){
+		if(par.classList.contains(className)){ break; }
+		par = par.parentElement;
+	}
+	return par;
+}
 function getHtml(str, first, attributes) {
 	var res = document.createElement('div');
 	if((typeof str) == 'string')
@@ -90,6 +99,10 @@ class Component{
 			if(this.cache && Component.all_components[this.url]){
 				this.datas = Component.all_components[this.url].data;
 				this.response = Component.all_components[this.url].response;
+
+				this.link_generated = Component.all_components[this.url].first_instance.link_generated;
+				this.style_generated = Component.all_components[this.url].first_instance.style_generated;
+				this.script_generated = Component.all_components[this.url].first_instance.script_generated;
 			}
 			else{
 				for (var i = 0; i < tentative; i++) {
@@ -106,7 +119,7 @@ class Component{
 								this.generateStyle();
 								this.generateScript();
 							}
-						}};
+						}, first_instance : this};
 						return response.text();
 					})
 					.then(data => {
@@ -179,6 +192,15 @@ class Component{
 			}
 
 			this.dom_element = this._generateAttributes(dom_element);
+			this.generateLink();
+			this.generateStyle();
+			this.generateScript();
+
+			if(this.cache && Component.all_components[this.url]){
+				Component.all_components[this.url].first_instance.link_generated = this.link_generated;
+				Component.all_components[this.url].first_instance.style_generated = this.style_generated;
+				Component.all_components[this.url].first_instance.script_generated = this.script_generated;
+			}
 
 			// this.generateStyle(style_element);
 			// this.generateScript(script_text);
