@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/css/suitcase.color.min.css">
+		<link rel="stylesheet" href="/assets/css/color.min.css">
+		<link rel="stylesheet" href="/assets/css/fonts.css">
+		<link rel="stylesheet" href="/assets/css/main.css">
+		
+		<script src="/assets/js/bootstrap.bundle.min.js"></script>
+		<!-- <script src="/assets/js/tailwind-plugins_forms-typography-aspect-ratio-line-clamp-3.4.1.js"></script> -->
+		<script src="/assets/js/tailwind-3.4.1.js"></script>
+		<script src="/assets/js/component.js"></script>
+		
+		<title>Valise à Roulette - Suitcase</title>
+	</head>
+	<body>
+		<div c-file="layouts/head-on.html" class="tw-bg-cover tw-bg-center tw-bg-no-repeat" style="background-image: url(/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg);" datas='{"image" : "/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg", "menu-type" : "push", "sticky" : true}'>
+			<div c-slot="head">
+				<div class="tw-py-3 md:tw-py-6 tw-px-6">
+					<div class=""><div c-file="components/navbars/nav-g.html"></div></div>
+				</div>
+			</div>
+			<div c-slot="body">
+				<br c-file="partials/si-part/single.htm" class="tw-mb-10" />
+				<br c-file="partials/si-part/more.htm" class="tw-mb-10" />
+				<!-- <br c-file="partials/h-sections/header-ban.htm" class="tw-bg-red-400- tw-bg-opacity-40 tw-overflow-hidden"/>
+				<br c-file="partials/h-sections/first.htm" class="tw-mt-20 overflow-x-hidden"/>
+				<br c-file="partials/h-sections/second.htm" class="tw-mt-20 overflow-x-hidden"/> -->
+			</div>
+		</div>
+	</body>
+</html>
