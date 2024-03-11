@@ -63,6 +63,9 @@ function mustache(text, datas, regexp, cl, def_val, func){
 	let val = text.replace(regexp, replaceCall).replace(new RegExp(preg_quote('#![]9&!'), 'g'), () => ':');
 	return error ? false : val;
 }
+function random_int(min, max) {
+	return Math.floor(Math.random() * ((max + 1) - min) + min);
+}
 class Component{
 	file;
 	tentative = 4;
