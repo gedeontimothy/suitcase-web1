@@ -11,7 +11,7 @@
 			<a data-active="{{active:1:i|[active] == 'A propos'}}" class="ff-jost-medium tw-relative zi-1" href="/pages/">À propos</a>
 		</div>
 		<div class="tw-flex tw-items-center tw-space-x-3">
-			<div class="tw-hidden md:tw-block" c-file="components/inputs/search-menu.html"></div>
+			<div class="tw-hidden md:tw-block" c-file="components/inputs/search-menu.html" datas='{"value" : "{{search-value:}}"}'></div>
 			<div class="tw-relative tw-flex">
 				<a class="tw-flex tw-justify-center tw-items-center" href="/pages/cart.html">
 					<br class="tw-w-6 tw-h-6" c-file="assets/icons/shopping-cart-0.svg"/>
@@ -50,12 +50,19 @@
 	}
 </style>
 <script type="text/javascript">
-	function addBadge(call){
+	function addBadge(call, el){
 		let bdg = document.querySelector('.badge-e928');
 		let val = parseInt(bdg.getAttribute('data-value') == '' ? 0 : bdg.getAttribute('data-value')); 
-		val++;
-		bdg.setAttribute('data-value', val);
-		bdg.innerHTML = val;
-		if(call) call();
+		if(typeof el === "object"){
+			let bb;
+			if(el.getAttribute('data-on-bag') == '1'){ val--; bb = '0'; }
+			else{ bb = '1'; val++; }
+			el.setAttribute('data-on-bag', bb)
+			// if(min && val > 0) val--;
+			// else val++;
+			bdg.setAttribute('data-value', val);
+			bdg.innerHTML = val;
+			if(call) call(el, val, bb);
+		}
 	}
 </script>
