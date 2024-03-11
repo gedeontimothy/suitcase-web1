@@ -20,7 +20,7 @@
 	<body class="">
 		<div c-file="layouts/head-on.html" style="background-image:linear-gradient(suitcase-bg-);" datas='{"image" : "/assets/img/30/claudia-altamimi-kYSJ1xBi848-unsplash.jpg"}'>
 			<div c-slot="head">
-				<header c-file="components/navbars/nav-g.html" class="rounded bg-transparent"></header>
+				<header c-file="components/navbars/nav-g.html" class="rounded bg-transparent py-3"></header>
 			</div>
 			<div c-slot="body">
 				<div class="tw-bg-red-400- container" c-file="components/banners/banner-op.html">
@@ -57,21 +57,16 @@
 						<br c-file="components/titles/main.html" datas='{"title" : "Quelques unes de nos produits"}'/>
 					</div>
 					<div class="container mx-auto">
-						<div class="row tw-space-x-4 ">
-							<div class="col " c-file="components/cards/card__6.html" datas='{"title" : "High Quality Lightweight Hand", "description" : "$560.00", "image" : "/assets/img/30/sun-lingyan-q-4fbq8pUO4-unsplash.jpg"}'></div>
-							<div class="col" c-file="components/cards/card__6.html" datas='{"title" : "Factory Hot Selling ABS Trolley", "description" : "$65.00", "image" : "/assets/img/original/pexels-andrew-neel-13145853.jpg"}'></div>
-							<div class="col" c-file="components/cards/card__6.html" datas='{"title" : "Branded Luggage Suitcase ", "description" : "$1.60", "image" : "/assets/img/30/oliur-1JNk998-g70-unsplash.jpg"}'></div>
-							
+						<div class="  row space-bettween">
+							<div class="col-12 col-sm-4 mb-3" c-file="components/cards/card__6.html" datas='{"title" : "High Quality Lightweight Hand", "description" : "$560.00", "image" : "/assets/img/30/sun-lingyan-q-4fbq8pUO4-unsplash.jpg"}'></div>
+							<div class="col-12 col-sm-4" c-file="components/cards/card__6.html" datas='{"title" : "Factory Hot Selling ABS Trolley", "description" : "$65.00", "image" : "/assets/img/original/pexels-andrew-neel-13145853.jpg"}'></div>
+							<div class="col-12 col-sm-4" c-file="components/cards/card__6.html" datas='{"title" : "Branded Luggage Suitcase ", "description" : "$1.60", "image" : "/assets/img/30/oliur-1JNk998-g70-unsplash.jpg"}'></div>
+						
 						</div>
-						<div class="row tw-space-x-4">
-							<div class="col" c-file="components/cards/card__6.html" datas='{"title" : "Multi Functional Plastic Novelty", "description" : "$260.00", "image" : "/assets/img/30/pexels-max-rahubovskiy-6394537.jpg"}'></div>
-							<div class="col" c-file="components/cards/card__6.html" datas='{"title" : "RASTAR Novelty Design Remote", "description" : "$59.00", "image" : "/assets/img/original/premium_photo-1684407616508-b9e82c8bc8a0.jpg"}'></div>
-							<div class="col" c-file="components/cards/card__6.html" datas='{"title" : "Promotional Grocery Folding", "description" : "$83.00", "image" : "/assets/img/30/pexels-anastasia-shuraeva-5705068.jpg"}'></div>
-							
-						</div>
+					
 					</div>
 				</section>
-				<footer class="tw-mt-11" c-file="components/footers/main.html"></footer>
+				<!--<footer class="tw-mt-11" c-file="components/footers/main.html"></footer>-->
 			</div>
 		</div>
 	</body>
