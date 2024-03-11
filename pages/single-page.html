@@ -19,7 +19,12 @@
 		<title>Valise à Roulette - Suitcase</title>
 	</head>
 	<body>
-		<div c-file="layouts/head-on.html" class="tw-bg-cover tw-bg-center tw-bg-no-repeat" style="background-image: url(/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg);" datas='{"image" : "/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg", "menu-type" : "push", "sticky" : true, "active-menu" : "-"}'>
+		<div c-file="layouts/head-on.html" class="tw-bg-cover tw-bg-center tw-bg-no-repeat" style="background-image: url(/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg);" datas='{"image" : "/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg", "menu-type" : "push", "sticky" : true}'>
+			<div c-slot="head">
+				<div class="tw-py-3 md:tw-py-6 tw-px-6">
+					<div class=""><div c-file="components/navbars/nav-g.html"></div></div>
+				</div>
+			</div>
 			<div c-slot="body">
 				<br c-file="partials/si-part/single.htm" class="tw-mb-10" />
 				<br c-file="partials/si-part/more.htm" class="tw-mb-10" />
