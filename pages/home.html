@@ -18,10 +18,10 @@
 		<title>Acceuil - Suitcase</title>
 	</head>
 	<body class="">
-		<div c-file="layouts/head-on.html" style="background-image: url(/assets/img/30/premium_photo-1681488270353-3da76d262fbf.jpg);" datas='{"image" : "/assets/img/30/premium_photo-1681488270353-3da76d262fbf.jpg"}'>
-			<div c-slot="head">
-				<header c-file="components/navbars/navbar_sv.html"></header>
-			</div>
+		<div c-file="layouts/head-on.html" style="background-image:linear-gradient(suitcase-bg-);" datas='{"image" : "/assets/img/30/claudia-altamimi-kYSJ1xBi848-unsplash.jpg"}'>
+			<!--<div c-slot="head">
+				<header c-file="components/navbars/nav-g.html" class="rounded bg-transparent py-3"></header>
+			</div>-->
 			<div c-slot="body">
 				<div class="tw-bg-red-400- container" c-file="components/banners/banner-op.html">
 					<div id="datas">
@@ -43,9 +43,10 @@
 							</svg>
 						</div>
 					</div>
+					
 					<div c-slot="button">
-						<br c-file="components/buttons/sample.html" datas='{"title" : "Test", "link" : 33}'/>
-						<br c-file="components/buttons/sample.html" datas='{"type" : 1, "title" : "Test", "link" : 33}'/>
+						<br c-file="components/buttons/sample.html" datas='{"title" : "Nous contacter", "link" : 33}'/>
+						<br c-file="components/buttons/sample.html" datas='{"type" : 1, "title" : "Voir plus", "link" : 33}'/>
 					</div>
 				</div>
 				<section class="">
@@ -56,14 +57,16 @@
 						<br c-file="components/titles/main.html" datas='{"title" : "Quelques unes de nos produits"}'/>
 					</div>
 					<div class="container mx-auto">
-						<div class="row tw-space-x-4">
-							<div class="col" c-file="components/cards/card__6.html" datas='{"title" : "A", "description" : "D", "image" : "/assets/img/30/sun-lingyan-q-4fbq8pUO4-unsplash.jpg"}'></div>
-							<div class="col" c-file="components/cards/card__6.html" datas='{"title" : "A", "description" : "D", "image" : "/assets/img/original/american-green-travel-ji5XMfO3dXY-unsplash.jpg"}'></div>
-							<div class="col" c-file="components/cards/card__6.html" datas='{"title" : "A", "description" : "D", "image" : "/assets/img/30/oliur-1JNk998-g70-unsplash.jpg"}'></div>
+						<div class="  row space-bettween">
+							<div class="col-12 col-sm-4 mb-3" c-file="components/cards/card__6.html" datas='{"title" : "High Quality Lightweight Hand", "description" : "$560.00", "image" : "/assets/img/30/sun-lingyan-q-4fbq8pUO4-unsplash.jpg"}'></div>
+							<div class="col-12 col-sm-4" c-file="components/cards/card__6.html" datas='{"title" : "Factory Hot Selling ABS Trolley", "description" : "$65.00", "image" : "/assets/img/original/pexels-andrew-neel-13145853.jpg"}'></div>
+							<div class="col-12 col-sm-4" c-file="components/cards/card__6.html" datas='{"title" : "Branded Luggage Suitcase ", "description" : "$1.60", "image" : "/assets/img/30/oliur-1JNk998-g70-unsplash.jpg"}'></div>
+						
 						</div>
+					
 					</div>
 				</section>
-				<footer class="tw-mt-11" c-file="components/footers/main.html"></footer>
+				<!--<footer class="tw-mt-11" c-file="components/footers/main.html"></footer>-->
 			</div>
 		</div>
 	</body>
