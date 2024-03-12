@@ -6,12 +6,12 @@
 		</a>
 		<div class="list-menu-e2hh tw-hidden md:tw-flex md:tw-space-x-7 lg:tw-space-x-12 xl:tw-space-x-16 suitcase-color-dark-30">
 			<a data-active="{{active:1:i|![active] || [active] == 'Accueil'}}" class="ff-jost-medium tw-relative zi-1" href="/pages/home.html">Accueil</a>
-			<a data-active="{{active:1:i|[active] == 'Parcourir'}}" class="ff-jost-medium tw-relative zi-1" href="/pages/">Catalogue</a>
+			<a data-active="{{active:1:i|[active] == 'Parcourir'}}" class="ff-jost-medium tw-relative zi-1" href="/pages/catalogue.html">Catalogue</a>
 			<a data-active="{{active:1:i|[active] == 'Contact'}}" class="ff-jost-medium tw-relative zi-1" href="/pages/contact.html">Contact</a>
 			<a data-active="{{active:1:i|[active] == 'A propos'}}" class="ff-jost-medium tw-relative zi-1" href="/pages/apropo.html">À propos</a>
 		</div>
 		<div class="tw-flex tw-items-center tw-space-x-3">
-			<div class="tw-hidden md:tw-block" c-file="components/inputs/search-menu.html"></div>
+			<div class="tw-hidden md:tw-block" c-file="components/inputs/search-menu.html" datas='{"value" : "{{search-value:}}"}'></div>
 			<div class="tw-relative tw-flex">
 				<a class="tw-flex tw-justify-center tw-items-center" href="/pages/cart.html">
 					<br class="tw-w-6 tw-h-6" c-file="assets/icons/shopping-cart-0.svg"/>
@@ -50,13 +50,19 @@
 	}
 </style>
 <script type="text/javascript">
-	function addBadge(call, min){
+	function addBadge(call, el){
 		let bdg = document.querySelector('.badge-e928');
 		let val = parseInt(bdg.getAttribute('data-value') == '' ? 0 : bdg.getAttribute('data-value')); 
-		if(min && val > 0) val--;
-		else val++;
-		bdg.setAttribute('data-value', val);
-		bdg.innerHTML = val;
-		if(call) call();
+		if(typeof el === "object"){
+			let bb;
+			if(el.getAttribute('data-on-bag') == '1'){ val--; bb = '0'; }
+			else{ bb = '1'; val++; }
+			el.setAttribute('data-on-bag', bb)
+			// if(min && val > 0) val--;
+			// else val++;
+			bdg.setAttribute('data-value', val);
+			bdg.innerHTML = val;
+			if(call) call(el, val, bb);
+		}
 	}
 </script>
