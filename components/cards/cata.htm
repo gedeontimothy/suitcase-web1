@@ -1,0 +1,38 @@
+<a href="{{link}}" class="component-cards-cata-la8rcgpd tw-block " id="18709">
+	<div class="conten-euj932 tw-flex tw-space-x-4 tw-transform hover:tw-scale-105 tw-transition tw-duration-200">
+		<div class="image-h832h2 tw-w-20 tw-h-20 tw-rounded-xl tw-bg-color-white-40 bg-color-white bg-color-opacity-50 tw-bg-no-repeat tw-bg-center tw-bg-cover" role="img" alt="Image from Unsplash by Yurii Stupen" title="Image from Unsplash by Yurii Stupen" style="background-image: url({{image:}});"></div>
+		<div class="description-dwh82 tw-flex-1 tw-w-full tw-overflow-hidden">
+			<div class="product-price-he28">
+				<span title="Une reduction de 48%" class="ff-jost-bold tw-inline-block tw-text-xs lg:tw-text-sm">
+					<span class="{{[old-price]:tw-hidden:i|[old-price]}}" style="text-decoration: line-through;">{{old-price:[old-price]}}</span>
+					<span>{{old-price:- :i|[old-price]}}{{price}}</span>
+				</span>
+			</div>
+			<div title="{{product}}"><span class="ff-jost-bold tw-overflow-hidden tw-inline-block tw-w-full tw-text-base lg:tw-text-lg" style="text-overflow: ellipsis; white-space: nowrap;">{{product}}</span></div>
+			<div title="{{description:}}" class="product-description-dj92 tw-w-full tw-overflow-hidden {{description:tw-hidden:i|![description]}}"><p class="ff-jost tw-opacity-70 tw-w-full tw-overflow-hidden tw-text-xs lg:tw-text-sm" style="text-overflow: ellipsis; white-space: nowrap;">{{description:}}</p></div>
+		</div>
+	</div>
+</a>
+
+<!-- EXEMPLE D'UTILISATION
+
+	<br c-file="components/cards/cata.htm" datas='{
+		
+		"price" : "$289",
+		
+		"product" : "Amet, ipsum lorem consectetu dolor sit",
+		
+		"image" : "/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg",
+
+		"link" : "/pages/single-page.html",
+
+		"description" : "Sit  amet consectetur do adipiscing lorem dolor elit ipsum.",
+
+		"old-price" : "778$"
+
+	}'/>
+		
+	PROPS OBLIGATOIRE : price, product, link, image
+	PROPS NON OBLIGATOIRE : old-price, description
+
+ -->
