@@ -24,3 +24,6 @@ video{ max-height: 90vh; }
 	0%{opacity: 0}
 	100%{opacity: 0}
 }
+*[c-file]{
+	display: none;
+}

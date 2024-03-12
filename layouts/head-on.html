@@ -27,7 +27,7 @@
 	<div data-state="0" class="menu-e82 tw-flex
 		{{menu-type:tw-w-full:i|![menu-type] || [menu-type] == 'fixed'}}
 		{{menu-type:md\:tw-p-5 tw-w-11/12 sm\:tw-w-1/2 md\:tw-w-5/12:i|[menu-type] == 'push'}}
-		lg:tw-hidden tw-items-center tw-justify-end tw-h-full tw-transition-all tw-duration-200 tw-z-10">
+		md:tw-hidden tw-items-center tw-justify-end tw-h-full tw-transition-all tw-duration-200 tw-z-10">
 		<div class="close-area-ww92 -zi-1 tw-w-full tw-h-full bg-color-black bg-color-opacity-20 tw-absolute tw-cursor-pointer" onclick="layout_main_toggle_menu();"></div>
 		<div class="container-e29n tw-h-full tw-my-auto tw-p-3
 			sm:tw-p-4 md:tw-p-5
@@ -72,7 +72,7 @@
 		position: absolute;
 		left: 0; top: 0;
 	}
-	.bck-ew92.img-e92{ filter: blur(50px) brightness(.9); }
+	.bck-ew92.img-e92{ filter: blur(50px) brightness(1.1); }
 	.layout-main-29hd{}
 	.layout-main-29hd[data-menu-type="fixed"]{}
 	.layout-main-29hd[data-menu-type="push"]{}
@@ -90,6 +90,11 @@
 
 	.layout-main-29hd .menu-e82 .container-e29n{ transform: translateX(100%) scale(.9); }
 	.layout-main-29hd .menu-e82[data-state="1"]  .container-e29n{ transform: translateX(0%); }
+	@media (min-width: 769px){
+		.main-content-28h{
+			transform: translateX(0) !important;
+		}
+	}
 	@media (max-width: 768px) {
 		.bck-ew92.img-e92{ filter: blur(40px) brightness(.9); }
 	}
