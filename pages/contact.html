@@ -15,17 +15,18 @@
 		
 		<title>Acceuil - Suitcase</title>
 </head>
-<body style="background-color: rgba(161, 162, 163, 0.541);">
-    
-    <div c-slot="head">
-        <header c-file="components/navbars/nav-g.html" class="rounded bg-transparent"></header>
+<body  class=" "  datas='{"image" : "/assets/img/30/rrrrr.jpg"}'>
+    <div c-file="layouts/head-on.html" style="background-image:linear-gradient(suitcase-bg-); " datas='{"image" : "/assets/img/30/rrrrr.jpg"}'>
+        <div c-slot="head">
+            <header c-file="components/navbars/nav-g.html" class="rounded bg-transparent"></header>
+        </div>
+        <div c-slot="body" >
+            
+            <div class="tw-mt-11" c-file="components/contact/main.html"></div>
+             
+            
+            <footer class="tw-mt-11" c-file="components/footers/main.html"></footer>
+        </div>
     </div>
-    <div style="margin-left: 10px;margin-top: 32px;">
-        <h1 style="font-size: 30px; ">Contacter nous</h1>
-        <hr style="width:177px;border:5px solid  ; " class="round suitcase-bg-color-dark-25">
-    </div>
-    <div class="tw-mt-11" c-file="components/contact/main.html"></div>
-     
-    <footer class="tw-mt-11" c-file="components/footers/main.html"></footer>
 </body>
 </html>
