@@ -1,0 +1,26 @@
+<div class="rating-d20ke3 tw-flex tw-flex-wrap tw-items-center tw-mt-2">
+	<div class="stars-29jw2 tw-flex tw-items-center tw-px-1 tw-space-x-0.5 tw-h-3">
+		<span class="tw-inline-block tw-w-3 tw-h-3">
+			<br c-file="assets/icons/star{{rate:_fill:i|[rate] >= 1}}{{rate:_half_empty:i|[rate] == 0.5}}{{rate::i|[rate] < 0.5}}.svg"/>
+		</span>
+		<span class="tw-inline-block tw-w-3 tw-h-3">
+			<br c-file="assets/icons/star{{rate:_fill:i|[rate] >= 2}}{{rate:_half_empty:i|[rate] == 1.5}}{{rate::i|[rate] < 1.5}}.svg"/>
+		</span>
+		<span class="tw-inline-block tw-w-3 tw-h-3">
+			<br c-file="assets/icons/star{{rate:_fill:i|[rate] >= 3}}{{rate:_half_empty:i|[rate] == 2.5}}{{rate::i|[rate] < 2.5}}.svg"/>
+		</span>
+		<span class="tw-inline-block tw-w-3 tw-h-3">
+			<br c-file="assets/icons/star{{rate:_fill:i|[rate] >= 4}}{{rate:_half_empty:i|[rate] == 3.5}}{{rate::i|[rate] < 3.5}}.svg"/>
+		</span>
+		<span class="tw-inline-block tw-w-3 tw-h-3">
+			<br c-file="assets/icons/star{{rate:_fill:i|[rate] >= 5}}{{rate:_half_empty:i|[rate] == 4.5}}{{rate::i|[rate] < 4.5}}.svg"/>
+		</span>
+	</div>
+	<div class="appreciate-e2h3he2u tw-px-1"><span class="tw-inline-block ff-jost-medium tw-text-xs sm:tw-text-sm tw-relative">{{review:246}} Review</span></div>
+</div>
+<style type="text/css">
+.rating-d20ke3 .appreciate-e2h3he2u > span:after{
+	content: " "; background-color: currentColor;
+	position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px; border-radius: 4px;
+}
+</style>
