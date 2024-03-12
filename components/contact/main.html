@@ -1,41 +1,205 @@
  
- <div class="container " style="background-color: rgb(222, 238, 252) ;border-radius: 20px;">
-	<div class="row " >
-		<div class="col-4  ">
-			<img src="/assets/img/30/sun-lingyan-q-4fbq8pUO4-unsplash.jpg" class="float-start cc" alt="...">
+
+<section class="contact">
+	<div class="content">
+		<h2>contac Us</h2>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
+			 beatae veritatis corporis dignissimos id, sapiente voluptatum voluptates .</p>
+	</div>
+	<div class="container">
+		<div class="contactinfo">
+			<div class="box">
+				<div class="icon"><img src="/assets/icons/icons8_map_pinpoint_1.ico" alt=""></div>
+				<div class="text">
+					<h4 class="">adress</h4>
+					<p>unikin lemba <br>math info <br> projet suitcase</p>
+
+				</div>
+			</div>
+			<div class="box">
+				<div class="icon"><img src="/assets/icons/icons8_mail.ico" alt=""></div>
+				<div class="text">
+					<h4>mail</h4>
+					<p>suitcase.com</p>
+					
+				</div>
+			</div>
+			<div class="box">
+				<div class="icon"><img src="/assets/icons/icons8_call.ico" alt=""></div>
+				<div class="text">
+					<h4>phone</h4>
+					<p>0898378378</p>
+					
+				</div>
+			</div>
+		</div>
+		<div class="contactform" style="border-radius: 20px;">
+			<form action="">
+				<h2 >Send message</h2>
+			<div class="inputbox">
+			<input type="text" name="" required="required">
+			<span>full name</span>
+		</div>
+		<div class="inputbox">
+			<input type="text" name="" required="required">
+			<span>Email</span>
+		</div>
+		<div class="inputbox">
+			<textarea required="required"></textarea>
+			<span>type you message....</span>
+		</div>
+		<div class="inputbox Suitcase-bg-color-dark-35">
+			<input type="submit" value="send">
 			
 		</div>
-		
-			<div class="col" style="width: 697px; ">
-				<div style="text-align: center;">
-					<p>Nous aimons avoir se vos nouvelles! veuillez nous faire savoir si vous <br>
-					avez des questions ou des préoccupations et  nous vous répondrons dans <br> les 2 jours ouvrable .merci! </p>
-				</div>
-				<form  action="/action_page.php" style="margin-left: 10px;margin-top: -61px; "><br>
-					<label for="nom" class="form-label">Nom:</label>
-					<input type="text" class="form-control form-control-lg" placeholder="Saisi le Nom">
-					<label for="mail" class="form-label">Email:</label>
-					<input type="text" class="form-control form-control-lg" placeholder="Exemple@gmal.com">
-					<label for="numero" class="form-label">Numero:</label>
-					<input type="text" class="form-control form-control-lg" placeholder="saisi  le numero">
-					<label for="comment">Commentaire:</label>
-					<textarea class="form-control" rows="5" id="comment" name="text"></textarea><br>
-					<div class="d-grid">
-						<button type="button" class="btn btn-primary btn-block">Envoyer</button>
-					</div> 
-					
-					
-				
-				  </form>
-			  </div>
-	
+
+			</form>
+		</div>
 	</div>
-  </div>
+</section>
+
+  
   <style>
-     .cc{
-		width: 385px;
-    height: 573px;
-	margin-left: -27px;
+     .contact{
+		position: relative;
+		min-height: 100vh;
+		padding: 50px 100px;
+		display: flex;
+		justify-content: center;
+		align-items:center ;
+		flex-direction: column;
+		text-align: center;
+	 }
+	 .contact .content{
+		max-width: 800px;
+		text-align: center;
+
+	 }
+	 .contact .content h2{
+     font-size: 45px;
+	 font-weight: 500;
+	 color: #fff;
+
+	 }
+	 .contact .content p{
+      
+	 font-weight: 300;
+	 color: #fff;
+	 
+	 }
+	 .container{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 30px;
+	 }
+	 .container .contactinfo{
+        width: 50%;
+		display: flex;
+		flex-direction: column;
+
+	 }
+	 .container .contactinfo .box{
+       position: relative;
+	   padding: 20px 0;
+	   display: flex;
+
+	 }
+	 .container .contactinfo .box .icon{
+		min-width: 60px;
+		height: 60px;
+		background: #fff;
+       display: flex;
+	   justify-content: center;
+	   align-items: center;
+	   border-radius: 50%;
+	   font-size: 22px;
+	 }
+	 .container .contactinfo .box  .text{
+		display: flex;
+		margin-left: 20px;
+		font-size: 16px;
+		color: #fff;
+		flex-direction: column;
+		font-weight: 300;
+	 }
+	 .container .contactinfo .box  .text h4{
+		font-weight: 300;
+	color: #0a56fc;
+	
 	
 	 }
+	 .contactform{
+		width: 40% ;
+		padding: 40px;
+		background: hsla(0, 100%, 100%, .2);
+		
+	 }
+	 .contactform h2{
+		font-size: 30px;
+		color: #333;
+		font-weight: 500;
+
+	 }
+     .contactform .inputbox{
+		position: relative;
+		width: 100%;
+		margin-top: 10px;
+		
+		
+	 }
+	 .contactform .inputbox input,
+	 .contactform .inputbox  textarea{
+		width: 100%;
+		padding: 5px 0;
+		font-size: 16px;
+		margin: 10px 0;
+		border: none;
+		border-bottom: 2px solid #666464;
+		outline: none;
+		background: transparent;
+	 }
+	 .contactform .inputbox span{
+		position: absolute;
+		left: 0;
+		padding: 5px 0;
+		font-size: 16px;
+		margin: 10px 0;
+		pointer-events: none;
+		transition: 0.5s;
+		color: #666;
+
+	 }
+	 .contactform .inputbox input:focus ~ span,
+	 .contactform .inputbox input:valid ~ span,
+	 .contactform .inputbox textarea:focus ~ span,
+	 .contactform .inputbox textarea:valid ~ span{
+		color: #e91E63;
+		font-size: 12px;
+		transform: translateY(-20px);
+
+	 }
+	 .contactform .inputbox input[type="submit"]{
+		width: 100px;
+		background: #0a56fc;
+		color: #fff;
+		border: none;
+		cursor: pointer;
+		padding: 10px;
+		font-size: 18px;
+		border-radius: 20px;
+
+	 }
+	 @media(max-width:991px)
+{
+	.contact{padding: 50px;}
+
+	.container{
+		flex-direction: column;
+	}
+	.container .contactinfo{margin-bottom: ;}
+	.container .contactinf, .contactform{width: 100%;}
+}
+	 
   </style>
