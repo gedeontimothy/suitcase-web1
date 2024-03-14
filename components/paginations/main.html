@@ -34,7 +34,7 @@
 					var pages_w92 = parseInt(p_e8y2.getAttribute('data-page'));
 					var active_w92h = p_e8y2.getAttribute('data-active') && p_e8y2.getAttribute('data-active') != ''? p_e8y2.getAttribute('data-active') : 1;
 					if(pages_w92){
-						console.log(pages_w92)
+						// console.log(pages_w92)
 						for (var i = 0; i < pages_w92; i++) {
 							p_e8y2.children[0].innerHTML += temp_e892h(active_w92h == (i+1), i + 1, true);
 							if(i == 4 && (pages_w92 - 4) > i){
