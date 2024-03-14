@@ -4,50 +4,28 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
+
 		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/assets/css/suitcase.color.min.css">
 		<link rel="stylesheet" href="/assets/css/color.min.css">
 		<link rel="stylesheet" href="/assets/css/fonts.css">
 		<link rel="stylesheet" href="/assets/css/main.css">
-		
+
 		<script src="/assets/js/bootstrap.bundle.min.js"></script>
 		<script src="/assets/js/tailwind-3.4.1.js"></script>
 		<script src="/assets/js/component.js"></script>
-		
-		<title>Shopping card</title>
+
+		<title>À propos - Suitcase</title>
     </head>
     <body class="">
-		<div c-file="layouts/head-on.html" style="background-image:linear-gradient(suitcase-bg-);" datas='{"image" : "/assets/img/30/claudia-altamimi-kYSJ1xBi848-unsplash.jpg"  }'>
-			<!--<div c-slot="head">
-				<header c-file="components/navbars/nav-g.html" class="rounded bg-transparent"></header>
-			</div>-->
-			<div c-slot="body" class=" " >
-
-				 <div c-file="partials/secondary__partial/partial__about.html" class="d-flex justify-content-center"style="display:flex;justify-content:center" >
-					<div id="datas">
-						
-					</div>
-					
-				 </div>
-				 <div class="container-md tw-px-3 md:tw-px-3 tw-mt-9" style="margin-top:5%;">
-					<br c-file="components/titles/proxim.htm" datas='{"title":"Nos Partenaire"}' data-scroll="body-2he" data-scroll-percent="50"/>
-			    </div>
-				 <div c-file="partials/secondary__partial/second__partial__about.html" class="d-flex justify-content-center"style="display:flex;justify-content:center" >
-					<div id="datas">
-						
-					</div>
-
-				 </div>
-
-				
-              <!--   <footer class="tw-mt-11" c-file="components/footers/main.html"></footer>-->
-           </div>
-           
-        </div>
-    </body>
-    
+		<div c-file="layouts/head-on.html" class="tw-bg-cover tw-bg-center tw-bg-no-repeat tw-bg-fixed" style="background-image: url(/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg);" datas='{"image" : "/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg", "menu-type" : "push", "sticky" : false, "active-menu" : "A propos"}'>
+			<div c-slot="body">
+				<div c-file="partials/secondary__partial/partial__about.html" class="d-flex justify-content-center" style="display:flex;justify-content:center"></div>
+				<div class="container-md tw-px-3 md:tw-px-3 tw-mt-9" style="margin-top: 5%;">
+					<br c-file="components/titles/proxim.htm" datas='{"title": "Nos Partenaire"}' data-scroll="body-2he" data-scroll-percent="50"/>
+				</div>
+				<div c-file="partials/secondary__partial/second__partial__about.html" class="d-flex justify-content-center" style="display:flex; justify-content:center;"></div>
+			</div>
+		</div>
+	</body>
 </html>
-<style>
-
-</style>

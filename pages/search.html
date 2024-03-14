@@ -12,11 +12,10 @@
 		<link rel="stylesheet" href="/assets/css/main.css">
 		
 		<script src="/assets/js/bootstrap.bundle.min.js"></script>
-		<!-- <script src="/assets/js/tailwind-plugins_forms-typography-aspect-ratio-line-clamp-3.4.1.js"></script> -->
 		<script src="/assets/js/tailwind-3.4.1.js"></script>
 		<script src="/assets/js/component.js"></script>
 		
-		<title>Valise à Roulette - Suitcase</title>
+		<title>Recherche "..." - Suitcase</title>
 		<style type="text/css">
 			.component-card-third-we2{opacity: 0;transition: .5s; transform: translateY(-20%);}
 			.component-card-third-we2[data-scroll-active="1"]{
@@ -57,11 +56,10 @@
 			};
 			let dd = {"image" : "/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg", "menu-type" : "push", "sticky" : true, "active-menu" : "-"};
 			dd["search-value"] = params.get('search') ?? '';
+			document.querySelector('head title').innerText = 'Recherche "' + (datas.search.length > 8 ? datas.search.substr(0, 16) + '...' : datas.search) + '" - Suitcase';
 			document.querySelector('.layout-e2je').setAttribute('datas', JSON.stringify(dd));
 
-			// console.log(document.querySelector('.search-ban-2hd'))
 			document.querySelector('.search-ban-2hd').setAttribute('datas', JSON.stringify(datas))
-			// console.log(document.querySelector('.search-ban-2hd'))
 
 			datas = [
 				{"product": "Samsonite S'Cure Spinner", "price": "$249.99", "old-price": "$299.99", "image" : "/assets/img/30/premium_photo-1684407616508-b9e82c8bc8a0.jpg"},
