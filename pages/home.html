@@ -1,45 +1,905 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/assets/css/suitcase.color.min.css">
-		<link rel="stylesheet" href="/assets/css/color.min.css">
-		<link rel="stylesheet" href="/assets/css/fonts.css">
-		<link rel="stylesheet" href="/assets/css/main.css">
-		
-		<script src="/assets/js/bootstrap.bundle.min.js"></script>
-		<!-- <script src="/assets/js/tailwind-plugins_forms-typography-aspect-ratio-line-clamp-3.4.1.js"></script> -->
-		<script src="/assets/js/tailwind-3.4.1.js"></script>
-		<script src="/assets/js/component.js"></script>
-		
-		<title>Acceuil - Suitcase</title>
-	</head>
-	<body>
-		<div c-file="layouts/head-on.html" class="tw-bg-cover tw-bg-center tw-bg-no-repeat tw-bg-fixed" style="background-image: url(/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg);" datas='{"image" : "/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg", "menu-type" : "push", "sticky" : false}'>
-			<div c-slot="body">
-				<br c-file="partials/h-sections/header-ban.htm" class="tw-bg-red-400- tw-bg-opacity-40 tw-overflow-hidden"/>
-				<br c-file="partials/h-sections/first.htm" class="tw-mt-20 overflow-x-hidden"/>
-				<br c-file="components/banners/picta.htm" class="tw-mt-20" datas='{"image" : "/assets/img/30/ash-edmonds-0aWZdK8nK2I-unsplash.jpg"}'/>
-				<br c-file="partials/h-sections/prod.htm" class="tw-mt-24" />
-				<!-- <section class="tw-mt-20">
-					<div class="container-md tw-px-3 md:tw-px-3 tw-mb-9">
-						<br c-file="components/titles/proxim.htm" datas='{"title" : "Quelques uns de nos produits"}' data-scroll="body-2he" data-scroll-percent="58"/>
-					</div>
-					<div class="container mx-auto">
-						<div class="  row space-bettween">
-							<div class="col-12 col-sm-4 mb-3" c-file="components/cards/card__6.html" datas='{"title" : "High Quality Lightweight Hand", "description" : "$560.00", "image" : "/assets/img/30/sun-lingyan-q-4fbq8pUO4-unsplash.jpg"}'></div>
-							<div class="col-12 col-sm-4" c-file="components/cards/card__6.html" datas='{"title" : "Factory Hot Selling ABS Trolley", "description" : "$65.00", "image" : "/assets/img/original/pexels-andrew-neel-13145853.jpg"}'></div>
-							<div class="col-12 col-sm-4" c-file="components/cards/card__6.html" datas='{"title" : "Branded Luggage Suitcase ", "description" : "$1.60", "image" : "/assets/img/30/oliur-1JNk998-g70-unsplash.jpg"}'></div>
-						
-						</div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/suitcase.color.min.css">
+        <link rel="stylesheet" href="/assets/css/color.min.css">
+        <link rel="stylesheet" href="/assets/css/fonts.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+        
+        <script src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/component.js"></script>
+        
+        <title>Acceuil - Suitcase</title>
+        <style>/* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.tw-absolute{position:absolute}.tw-relative{position:relative}.-tw-bottom-1\/2{bottom:-50%}.-tw-right-1\/2{right:-50%}.tw-bottom-0{bottom:0px}.tw-top-0{top:0px}.tw-left-0{left:0px}.-tw-bottom-full{bottom:-100%}.tw-right-0{right:0px}.tw-z-10{z-index:10}.tw-my-auto{margin-top:auto;margin-bottom:auto}.tw-mt-20{margin-top:5rem}.tw-mt-24{margin-top:6rem}.tw-mt-10{margin-top:2.5rem}.tw-mb-9{margin-bottom:2.25rem}.tw-mt-12{margin-top:3rem}.tw-mr-3{margin-right:0.75rem}.tw-mt-16{margin-top:4rem}.tw-mb-3{margin-bottom:0.75rem}.tw-mt-2{margin-top:0.5rem}.tw-mt-3{margin-top:0.75rem}.tw-block{display:block}.tw-inline-block{display:inline-block}.tw-flex{display:flex}.tw-hidden{display:none}.tw-h-full{height:100%}.tw-h-12{height:3rem}.tw-h-6{height:1.5rem}.tw-h-4{height:1rem}.tw-h-20{height:5rem}.tw-w-11\/12{width:91.666667%}.tw-w-full{width:100%}.tw-w-12{width:3rem}.tw-w-6{width:1.5rem}.tw-w-4{width:1rem}.tw-w-10\/12{width:83.333333%}.tw-w-1\/2{width:50%}.tw-w-1\/6{width:16.666667%}.tw-flex-1{flex:1 1 0%}.tw-translate-y-1\/2{--tw-translate-y:50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.tw-transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.tw-cursor-pointer{cursor:pointer}.tw-flex-col{flex-direction:column}.tw-flex-wrap{flex-wrap:wrap}.tw-items-start{align-items:flex-start}.tw-items-end{align-items:flex-end}.tw-items-center{align-items:center}.tw-justify-end{justify-content:flex-end}.tw-justify-center{justify-content:center}.tw-justify-between{justify-content:space-between}.tw-justify-around{justify-content:space-around}.tw-space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.tw-space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.tw-space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.tw-space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.tw-space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.tw-space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.tw-space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.tw-overflow-hidden{overflow:hidden}.tw-overflow-y-auto{overflow-y:auto}.tw-rounded-2xl{border-radius:1rem}.tw-rounded-full{border-radius:9999px}.tw-rounded-3xl{border-radius:1.5rem}.tw-rounded-xl{border-radius:0.75rem}.tw-rounded-lg{border-radius:0.5rem}.tw-border-2{border-width:2px}.tw-border-b-4{border-bottom-width:4px}.tw-border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity))}.tw-border-opacity-30{--tw-border-opacity:0.3}.tw-bg-red-400{--tw-bg-opacity:1;background-color:rgb(248 113 113 / var(--tw-bg-opacity))}.tw-bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.tw-bg-opacity-40{--tw-bg-opacity:0.4}.tw-bg-opacity-20{--tw-bg-opacity:0.2}.tw-bg-cover{background-size:cover}.tw-bg-fixed{background-attachment:fixed}.tw-bg-center{background-position:center}.tw-bg-no-repeat{background-repeat:no-repeat}.tw-p-3{padding:0.75rem}.tw-p-5{padding:1.25rem}.tw-p-1{padding:0.25rem}.tw-p-1\.5{padding:0.375rem}.tw-px-6{padding-left:1.5rem;padding-right:1.5rem}.tw-py-3{padding-top:0.75rem;padding-bottom:0.75rem}.tw-px-2{padding-left:0.5rem;padding-right:0.5rem}.tw-py-1{padding-top:0.25rem;padding-bottom:0.25rem}.tw-px-3{padding-left:0.75rem;padding-right:0.75rem}.tw-px-4{padding-left:1rem;padding-right:1rem}.tw-py-20{padding-top:5rem;padding-bottom:5rem}.tw-py-7{padding-top:1.75rem;padding-bottom:1.75rem}.tw-px-5{padding-left:1.25rem;padding-right:1.25rem}.tw-py-2{padding-top:0.5rem;padding-bottom:0.5rem}.tw-pb-7{padding-bottom:1.75rem}.tw-pb-5{padding-bottom:1.25rem}.tw-text-center{text-align:center}.tw-text-2xl{font-size:1.5rem;line-height:2rem}.tw-text-xs{font-size:0.75rem;line-height:1rem}.tw-text-sm{font-size:0.875rem;line-height:1.25rem}.tw-text-3xl{font-size:1.875rem;line-height:2.25rem}.tw-text-xl{font-size:1.25rem;line-height:1.75rem}.tw-line-through{-webkit-text-decoration-line:line-through;text-decoration-line:line-through}.tw-placeholder-black::placeholder{--tw-placeholder-opacity:1;color:rgb(0 0 0 / var(--tw-placeholder-opacity))}.tw-placeholder-opacity-40::placeholder{--tw-placeholder-opacity:0.4}.tw-opacity-70{opacity:0.7}.tw-shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.tw-outline-none{outline:2px solid transparent;outline-offset:2px}.tw-transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.tw-duration-200{transition-duration:200ms}.tw-duration-500{transition-duration:500ms}@media (min-width: 768px){.md\:tw-container{width:100%}@media (min-width: 640px){.md\:tw-container{max-width:640px}}@media (min-width: 768px){.md\:tw-container{max-width:768px}}@media (min-width: 1024px){.md\:tw-container{max-width:1024px}}@media (min-width: 1280px){.md\:tw-container{max-width:1280px}}@media (min-width: 1536px){.md\:tw-container{max-width:1536px}}}.hover\:tw-bg-opacity-100:hover{--tw-bg-opacity:1}@media (min-width: 640px){.sm\:tw-w-1\/2{width:50%}.sm\:tw-w-1\/3{width:33.333333%}.sm\:tw-self-stretch{align-self:stretch}.sm\:tw-rounded-2xl{border-radius:1rem}.sm\:tw-p-2{padding:0.5rem}.sm\:tw-p-4{padding:1rem}.sm\:tw-p-3{padding:0.75rem}.sm\:tw-px-5{padding-left:1.25rem;padding-right:1.25rem}.sm\:tw-text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:tw-text-2xl{font-size:1.5rem;line-height:2rem}.sm\:tw-text-base{font-size:1rem;line-height:1.5rem}}@media (min-width: 768px){.md\:tw-mx-auto{margin-left:auto;margin-right:auto}.md\:tw-mt-0{margin-top:0px}.md\:tw-block{display:block}.md\:tw-flex{display:flex}.md\:tw-hidden{display:none}.md\:tw-w-5\/12{width:41.666667%}.md\:tw-w-1\/3{width:33.333333%}.md\:tw-w-1\/2{width:50%}.md\:tw-w-1\/4{width:25%}.md\:tw-items-start{align-items:flex-start}.md\:tw-space-x-7 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.75rem * var(--tw-space-x-reverse));margin-left:calc(1.75rem * calc(1 - var(--tw-space-x-reverse)))}.md\:tw-space-y-7 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.75rem * var(--tw-space-y-reverse))}.md\:tw-space-x-5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.25rem * var(--tw-space-x-reverse));margin-left:calc(1.25rem * calc(1 - var(--tw-space-x-reverse)))}.md\:tw-space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.md\:tw-p-4{padding:1rem}.md\:tw-p-5{padding:1.25rem}.md\:tw-p-1{padding:0.25rem}.md\:tw-p-1\.5{padding:0.375rem}.md\:tw-py-6{padding-top:1.5rem;padding-bottom:1.5rem}.md\:tw-px-3{padding-left:0.75rem;padding-right:0.75rem}.md\:tw-px-7{padding-left:1.75rem;padding-right:1.75rem}.md\:tw-px-8{padding-left:2rem;padding-right:2rem}.md\:tw-py-3{padding-top:0.75rem;padding-bottom:0.75rem}.md\:tw-pb-0{padding-bottom:0px}.md\:tw-text-left{text-align:left}.md\:tw-text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:tw-text-2xl{font-size:1.5rem;line-height:2rem}.md\:tw-text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:tw-flex{display:flex}.lg\:tw-hidden{display:none}.lg\:tw-w-1\/4{width:25%}.lg\:tw-w-1\/6{width:16.666667%}.lg\:tw-space-x-12 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(3rem * var(--tw-space-x-reverse));margin-left:calc(3rem * calc(1 - var(--tw-space-x-reverse)))}.lg\:tw-p-7{padding:1.75rem}.lg\:tw-p-2{padding:0.5rem}.lg\:tw-px-10{padding-left:2.5rem;padding-right:2.5rem}.lg\:tw-text-3xl{font-size:1.875rem;line-height:2.25rem}}@media (min-width: 1280px){.xl\:tw-space-x-16 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(4rem * var(--tw-space-x-reverse));margin-left:calc(4rem * calc(1 - var(--tw-space-x-reverse)))}.xl\:tw-p-10{padding:2.5rem}.xl\:tw-p-3{padding:0.75rem}}</style>
+        <style type="text/css">
+                html, body{height: 100%;}
+                .content-e9u2{
+                    height: 100%;
+                    overflow: hidden;
+                    position: revert;
+                    z-index: 1;
+                }
+                .content-e9u2:first-child{
+                    position: relative;
+                    z-index: 1;
+                }
+                .content-e9u2 .back-im-e8{
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0; left: 0;
+                    z-index: -10;
+                }
+                .bck-ew92{
+                    width: 100%; height: 100%;
+                    position: absolute;
+                    left: 0; top: 0;
+                }
+                .bck-ew92.img-e92{ filter: blur(50px) brightness(1.1); }
+                .layout-main-29hd{}
+                .layout-main-29hd[data-menu-type="fixed"]{}
+                .layout-main-29hd[data-menu-type="push"]{}
+                .layout-main-29hd .menu-e82{
+                    position: fixed;
+                    top: 0; right: 0;
+                }
+                .layout-main-29hd .menu-e82[data-state="0"]{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                .layout-main-29hd[data-menu-type="fixed"] .menu-e82{}
+                .layout-main-29hd[data-menu-type="push"] .menu-e82{}
+                .layout-main-29hd[data-menu-type="push"] .menu-e82 .close-area-ww92{ display: none; }
 
-					</div>
-				</section -->>
-			</div>
-		</div>
-	</body>
+                .layout-main-29hd .menu-e82 .container-e29n{ transform: translateX(100%) scale(.9); }
+                .layout-main-29hd .menu-e82[data-state="1"]  .container-e29n{ transform: translateX(0%); }
+                @media (min-width: 769px){
+                    .main-content-28h{
+                        transform: translateX(0) !important;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .bck-ew92.img-e92{ filter: blur(40px) brightness(.9); }
+                }
+        </style>
+        <script>
+            const MENU_TYPE = "push";
+            function layout_main_toggle_menu(el) {
+                el = el === undefined ? '.menu-e82' : el;
+                el = typeof el == 'string' ? document.querySelector(el) : el;
+                
+                let is_open = el.getAttribute('data-state') == '0' ? false : true;
+                
+                let main_co = document.querySelector('.main-content-28h');
+
+                if(!is_open){
+                    el.setAttribute('data-state', '1');
+                    if(MENU_TYPE == 'push'){
+                        main_co.ontouchstart = (e) => {
+                            e.preventDefault();
+                            layout_main_toggle_menu();
+                        }
+                        // main_co.onclick = main_co.ontouchstart;
+                        main_co.style.transform = "translateX(-" + el.offsetWidth + "px)";
+                    }
+                }
+                else{
+                    el.setAttribute('data-state', '0');
+                    if(MENU_TYPE == 'push'){
+                        main_co.ontouchstart = undefined;
+                        // main_co.onclick = undefined;
+                        main_co.style.transform = "";
+                    }
+                }
+            }
+        </script>
+        <style type="text/css">
+            .component-banner-picta-ww82h{}
+            .component-banner-picta-ww82h .back-c3g{
+                filter: brightness(.5);
+                /*filter: brightness(.3) blur(20px);*/
+            }
+            .component-banner-picta-ww82h .content-e2{}
+            .component-banner-picta-ww82h .content-e2 > div{
+                transition: .3s;
+                opacity: 0;
+                transform: translateY(-10%);
+            }
+            .component-banner-picta-ww82h .content-e2 > div:first-child,
+            .component-banner-picta-ww82h .content-e2 > div:last-child{
+                transform: translateY(10%);
+            }
+            .component-banner-picta-ww82h > div[data-scroll-active="1"] .content-e2 > div{
+                transform: translateY(0);
+                opacity: 1 !important;
+            }
+        </style>
+        <style type="text/css">
+            .component-nav-g-92e{}
+            .component-nav-g-92e .badge-e928[data-value=""],
+            .component-nav-g-92e .badge-e928[data-value="0"]{
+                display: none;
+            }
+            .component-nav-g-92e .list-menu-e2hh{}
+            .component-nav-g-92e .list-menu-e2hh a{}
+            .component-nav-g-92e .list-menu-e2hh a[data-active=""],
+            .component-nav-g-92e .list-menu-e2hh a[data-active="0"]{opacity: .5;filter: brightness(0);}
+            .component-nav-g-92e .list-menu-e2hh a[data-active="1"],
+            .component-nav-g-92e .list-menu-e2hh a:hover{opacity: 1;}
+            .component-nav-g-92e .list-menu-e2hh a::after{
+                content: "";
+                position: absolute; bottom: -3px; left: 0; right: 0;
+                margin-left: auto; margin-right: auto;
+                height: 3px; width: 0%;
+                background-color: currentColor;
+                border-radius: 3px;
+                transition: all .2s;
+            }
+            .component-nav-g-92e .list-menu-e2hh a:hover::after,
+            .component-nav-g-92e .list-menu-e2hh a[data-active="1"]::after{
+                width: 100%;
+            }
+        </style>
+        <script>
+            function addBadge(call, el){
+                let bdg = document.querySelector('.badge-e928');
+                let val = parseInt(bdg.getAttribute('data-value') == '' ? 0 : bdg.getAttribute('data-value')); 
+                if(typeof el === "object"){
+                    let bb;
+                    if(el.getAttribute('data-on-bag') == '1'){ val--; bb = '0'; }
+                    else{ bb = '1'; val++; }
+                    el.setAttribute('data-on-bag', bb)
+                    // if(min && val > 0) val--;
+                    // else val++;
+                    bdg.setAttribute('data-value', val);
+                    bdg.innerHTML = val;
+                    if(call) call(el, val, bb);
+                }
+            }
+        </script>
+        <style type="text/css">
+            .components-lists-main-w9u12 .list-s82h > *{
+                opacity: .7;
+            }
+            .components-lists-main-w9u12 .list-s82h > *:hover{
+                opacity: 1;
+            }
+
+            .components-lists-main-w9u12 .list-s82h a:hover{
+                color : hsla(210, 60%, 37%);
+            }
+        </style>
+        <style type="text/css">
+            .search-2e8eh{
+                opacity: 0;
+                transition: opacity .5s;
+            }
+            .search-2e8eh.show{
+                opacity: 1;
+            }
+        </style>
+        <style type="text/css">
+            .component-banner-op-ew29 svg { transition: all .3s; }
+            .component-banner-op-ew29 svg pattern{}
+            .component-banner-op-ew29 svg pattern > image{ transition: all 1s; }
+            .component-banner-op-ew29:hover svg pattern > image{
+                /*transform: rotate(10deg) scale(1.1);*/
+            }
+            .icon-content-e29{ height: 60vh; }
+            @media (min-width: 768px) {
+                main:hover .component-banner-op-ew29 svg{
+                    transform: rotate(10deg) scale(.6) translateX(-40%);
+                }
+                main:hover .component-banner-op-ew29 svg:last-child{
+                    transform: rotate(-10deg) scale(.6) translateX(40%);
+                }
+                main:hover .component-banner-op-ew29 .ico-d2j:hover svg{
+                    transform: rotate(10deg) scale(.6) translateX(30%);
+                    z-index: 100 !important;
+                }
+                main:hover .component-banner-op-ew29 .ico-d2j:hover svg:last-child{
+                    transform: rotate(-10deg) scale(.6) translateX(-30%);
+                }
+
+                main:hover .component-banner-op-ew29 .ico-d2j:hover svg pattern image{
+                    transform: scale(1.1);
+                }
+                .icon-content-e29{
+                    min-height: 60vh;
+                    height: auto;
+                }
+            }
+            @media (max-width: 340px) {
+                .icon-content-e29{
+                    min-height: 40vh;
+                    height: auto;
+                }
+            }
+        </style>
+        <style type="text/css">
+            .component-title-proxim-w29jn{}
+            .component-title-proxim-w29jn[data-type="center"]{}
+            .component-title-proxim-w29jn[data-type="left"]{}
+            .component-title-proxim-w29jn[data-type="right"]{}
+            
+            .component-title-proxim-w29jn[data-scroll] h3{
+                transform: scale(.7); opacity: .4;
+                transition: .5s;
+            }
+            .component-title-proxim-w29jn[data-scroll-active="1"] h3{
+                transform: scale(1); opacity: 1;
+            }
+            .component-title-proxim-w29jn span{
+                height: 4px;
+                border-radius: 10px;
+                background-color: currentColor;
+                transform: scaleX(0);
+                transition: .3s;
+                min-width: 10%;
+            }
+            /*  [data-component-title-proxim-hover-active="1"]:hover .component-title-proxim-w29jn span,*/
+            .component-title-proxim-w29jn[data-scroll-active="1"] span{
+                transform: scaleX(1);
+            }
+            .component-title-proxim-w29jn[data-type="center"] span:first-child{}
+            .component-title-proxim-w29jn[data-type="center"] span:last-child{}
+            
+            .component-title-proxim-w29jn[data-type="right"] span:first-child{}
+            .component-title-proxim-w29jn[data-type="right"] span:last-child{}
+            
+            .component-title-proxim-w29jn[data-type="left"] span:first-child{}
+            .component-title-proxim-w29jn[data-type="left"] span:last-child{}
+        </style>
+        <style type="text/css">
+            .component-cat-two-w1h{}
+            .component-cat-two-w1h[data-scroll]{
+                opacity: 0; transition: .4s;
+                transform: scale(.8) translateX(-50%);
+            }
+            [data-parent-card-two] > *:nth-child(2n) .component-cat-two-w1h[data-scroll]{
+                transform: scale(.8) translateX(50%);
+            }
+            .component-cat-two-w1h[data-scroll-active="1"]{
+                opacity: 1;
+                transform: translateX(0) !important;
+            }
+        </style>
+        <style type="text/css">
+            .component-card-define-e29{transition: .3s;}
+            .component-card-define-e29:hover{
+                transform: scale(1.06) translateY(-10%);
+                --suitcase-border-color-opacity : 1;
+            }
+            .component-card-define-e29 .image-e82h{}
+        </style>
+        <style type="text/css">
+            .component-card-sorta-ew92{display: block;}
+            .component-card-sorta-ew92 .back-s2h{
+                position: absolute; left: 0; bottom: 0;
+                height: 80%; width: 100%;
+                border-radius: 24px;
+                z-index: -1;
+            }
+            .component-card-sorta-ew92 .title-ed9e32{}
+        </style>
+        <style type="text/css">
+            .components-lists-main-w9u12 .title-e82yh:after{
+                content: "";
+                display: block;
+                height: 1px;
+                margin: 25px 0;
+                margin-bottom: 15px;
+                width: 70%;
+                background-color: rgba(0,0,0,.4);
+            }
+            .components-lists-main-w9u12:hover .title-e82yh:after{
+                background-color: hsla(210, 60%, 77%);
+            }
+            .components-lists-main-w9u12 .list-s82h > *.def-e2d{
+                font-size: 1rem;
+                font-family: "Jost Regular";
+            }
+            .components-lists-main-w9u12 .list-s82h > *.def-e2d:hover{
+                color : hsla(210, 60%, 37%);
+            }
+        </style>
+    </head>
+<body>
+    <main class="layout-main-29hd tw-w-full tw-h-full sm:tw-p-2 md:tw-p-4 lg:tw-p-7 xl:tw-p-10 tw-relative zi-1 tw-flex tw-bg-cover tw-bg-center tw-bg-no-repeat tw-bg-fixed" data-menu-type="push" style="background-image: url(/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg);">
+        <div class="main-content-28h tw-flex tw-h-full tw-w-full tw-flex-col tw-flex-1 tw-transition-all tw-duration-500 relative zi-1">
+            <div class="content-e9u2 suitcase-bg-color-light-35 sm:tw-rounded-2xl">
+                <div class="body-2he  tw-h-full tw-w-full tw-overflow-y-auto">
+                    <div class="tw-mb-5- tw-p-5 ">
+                        <!-- <div class="bg-color-white bg-color-opacity-20 tw-rounded-2xl tw-relative zi-1 overflow-hidden" style="min-height: 10px;"> -->
+                        <div class="bg-color-white bg-color-opacity-20 tw-rounded-2xl" style="min-height: 10px;">
+                            <div class="tw-py-3 md:tw-py-6 tw-px-6">
+                                <div class="">
+                                    <div class="component-nav-g-92e">
+                                        <div class="tw-flex tw-items-center tw-justify-between tw-space-x-3 color-black">
+                                            <a href="/pages/home.html" class="tw-flex tw-items-center tw-justify-center tw-space-x-1 suitcase-color-dark-30">
+                                                <svg style="fill:currentColor;" class="svg-physics tw-w-12 tw-h-12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                                                    <path d="M12 2C10.25 2 8.7708594 3.6194531 7.8808594 6.1894531C8.0308594 6.0794531 8.1896094 5.9808594 8.3496094 5.8808594C9.2996094 5.2908594 10.260703 4.779375 11.220703 4.359375C11.490703 4.119375 11.76 4 12 4C12.02 4 12.050312 3.9997656 12.070312 4.0097656C12.570312 4.0497656 13.159922 4.6003125 13.669922 5.5703125C13.673575 5.5772125 13.676038 5.5868061 13.679688 5.59375C12.352895 6.0134858 10.960243 6.6447791 9.5800781 7.484375C9.5804086 7.4832242 9.5797474 7.4816191 9.5800781 7.4804688C9.5371224 7.5019466 9.4990281 7.527587 9.4589844 7.5527344C9.442288 7.5630389 9.4248932 7.569716 9.4082031 7.5800781C9.0508915 7.8033064 8.7108837 8.0333375 8.3789062 8.2675781C8.2629956 8.349654 8.1516104 8.4323786 8.0390625 8.515625C7.8024443 8.6897546 7.5736787 8.8663042 7.3515625 9.0449219C7.2993972 9.0869383 7.2407963 9.1277745 7.1894531 9.1699219C7.1891161 9.1724213 7.1897893 9.175234 7.1894531 9.1777344C3.7912473 11.971197 2.1871234 15.227273 3.40625 17.330078C3.83625 18.070078 4.5775937 18.589844 5.5585938 18.839844C6.0085938 18.949844 6.4878125 19 7.0078125 19C7.4225758 19 7.8648683 18.96127 8.3222656 18.894531C8.6518617 19.612764 9.0413141 20.231645 9.4804688 20.720703C10.210469 21.540703 11.07 22 12 22C13.75 22 15.229141 20.380547 16.119141 17.810547C16.429141 16.920547 16.660547 15.920078 16.810547 14.830078C16.810884 14.827579 16.810211 14.824766 16.810547 14.822266C20.209334 12.028803 21.812877 8.7727274 20.59375 6.6699219C20.16375 5.9299219 19.422406 5.4101562 18.441406 5.1601562C18.211406 5.1001563 17.982422 5.0590625 17.732422 5.0390625C18.022422 5.7390625 18.261172 6.4890625 18.451172 7.2890625C18.641172 7.3990625 18.771328 7.5296875 18.861328 7.6796875C19.337121 8.5015113 18.561282 10.412731 16.498047 12.414062C16.396151 12.513485 16.302147 12.611198 16.193359 12.710938C15.90289 12.976835 15.578805 13.242682 15.242188 13.507812C15.148365 13.581246 15.067995 13.65556 14.970703 13.728516C14.526898 14.063881 14.048316 14.397074 13.529297 14.720703C12.779297 15.190703 12.049609 15.570625 11.349609 15.890625C11.549609 16.830625 11.788516 17.480547 11.978516 17.810547C12.782472 17.45531 13.605404 17.015733 14.419922 16.519531C13.989922 18.029531 13.379062 19.099141 12.789062 19.619141C12.519063 19.869141 12.25 20 12 20C11.97 20 11.940156 20.000469 11.910156 19.980469C11.410156 19.930469 10.840078 19.379687 10.330078 18.429688C10.060078 17.919687 9.7998438 17.290781 9.5898438 16.550781C9.4198438 15.960781 9.2796875 15.300078 9.1796875 14.580078C9.0996875 14.050078 9.0492969 13.480859 9.0292969 12.880859C9.0092969 12.600859 9 12.3 9 12C9 11.381366 9.0302762 10.793273 9.0800781 10.234375C9.5104762 9.9114786 9.9685012 9.5910206 10.46875 9.2792969C11.88797 8.39268 13.224448 7.8227712 14.416016 7.4628906C14.573446 8.0275844 14.711833 8.6683808 14.810547 9.359375C14.900547 9.929375 14.960469 10.539453 14.980469 11.189453C15.780469 10.499453 16.410078 9.8403125 16.830078 9.3203125C16.810078 9.1403125 16.78 8.9707812 16.75 8.8007812C16.66 8.1807813 16.529141 7.5892969 16.369141 7.0292969C16.179141 6.3292969 15.949688 5.689375 15.679688 5.109375C15.349687 4.389375 14.959531 3.7692969 14.519531 3.2792969C13.789531 2.4592969 12.93 2 12 2 z M 7 12.085938C7.0104304 13.879732 7.2309951 15.534628 7.6289062 16.960938C7.0000939 17.021331 6.4597781 17.001794 6.0488281 16.900391C5.5988281 16.780391 5.2886719 16.590312 5.1386719 16.320312C5.0486719 16.160312 4.9980469 15.960469 4.9980469 15.730469C4.9974406 14.863492 5.6620524 13.520177 7 12.085938 z"></path>
+                                                </svg>
+                                                <div class="tw-text-2xl ff-jost-semibold">Suitcase</div>
+                                            </a>
+                                            <div class="list-menu-e2hh tw-hidden md:tw-flex md:tw-space-x-7 lg:tw-space-x-12 xl:tw-space-x-16 suitcase-color-dark-30">
+                                                <a data-active="1" class="ff-jost-medium tw-relative zi-1" href="/pages/home.html">Accueil</a>
+                                                <a data-active="" class="ff-jost-medium tw-relative zi-1" href="/pages/catalog.html">Catalogue</a>
+                                                <a data-active="" class="ff-jost-medium tw-relative zi-1" href="/pages/contact.html">Contact</a>
+                                                <a data-active="" class="ff-jost-medium tw-relative zi-1" href="/pages/about.html">À propos</a>
+                                            </div>
+                                            <div class="tw-flex tw-items-center tw-space-x-3">
+                                                <div class="tw-hidden md:tw-block">
+                                                    <form method="" action="/pages/search.html" class="tw-hidden lg:tw-flex bg-color-white bg-color-opacity-20 tw-rounded-xl tw-items-center tw-space-x-1 tw-overflow-hidden tw-px-4">
+                                                        <svg style="fill:currentColor;" class="svg-fluent_search tw-w-4 tw-h-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                            <path d="M20.5 6C12.515556 6 6 12.515562 6 20.5C6 28.484438 12.515556 35 20.5 35C23.773158 35 26.788919 33.893018 29.220703 32.050781L38.585938 41.414062 A 2.0002 2.0002 0 1 0 41.414062 38.585938L32.050781 29.220703C33.893017 26.788918 35 23.773156 35 20.5C35 12.515562 28.484444 6 20.5 6 z M 20.5 10C26.322685 10 31 14.677319 31 20.5C31 23.295711 29.914065 25.820601 28.148438 27.697266 A 2.0002 2.0002 0 0 0 27.701172 28.144531C25.824103 29.912403 23.29771 31 20.5 31C14.677315 31 10 26.322681 10 20.5C10 14.677319 14.677315 10 20.5 10 z"></path>
+                                                        </svg>
+                                                        <input value="" class="tw-flex-1 outline-none tw-outline-none bg-transparent tw-px-2 tw-py-3 ff-jost tw-text-sm tw-placeholder-black tw-placeholder-opacity-40" type="" name="search" placeholder="Search...">
+                                                    </form>
+                                                    <form method="" action="/pages/search.html" class="lg:tw-hidden tw-relative zi-1">
+                                                        <svg style="fill:currentColor;" class="svg-fluent_search tw-w-6 tw-h-6 tw-cursor-pointer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" data-bs-toggle="collapse" data-bs-target="#collapse_e823u">
+                                                            <path d="M20.5 6C12.515556 6 6 12.515562 6 20.5C6 28.484438 12.515556 35 20.5 35C23.773158 35 26.788919 33.893018 29.220703 32.050781L38.585938 41.414062 A 2.0002 2.0002 0 1 0 41.414062 38.585938L32.050781 29.220703C33.893017 26.788918 35 23.773156 35 20.5C35 12.515562 28.484444 6 20.5 6 z M 20.5 10C26.322685 10 31 14.677319 31 20.5C31 23.295711 29.914065 25.820601 28.148438 27.697266 A 2.0002 2.0002 0 0 0 27.701172 28.144531C25.824103 29.912403 23.29771 31 20.5 31C14.677315 31 10 26.322681 10 20.5C10 14.677319 14.677315 10 20.5 10 z"></path>
+                                                        </svg>
+                                                        <!-- <button class="tw-flex tw-items-center tw-justify-center tw-p-2 tw-w-8 tw-h-8 bg-color-white bg-color-opacity-60 tw-rounded-full">
+                                                            <br class="tw-w-full tw-h-full" c-file="assets/icons/search.svg"/>
+                                                        </button> -->
+                                                        <div class="search-2e8eh collapse tw-absolute -tw-bottom-full tw-right-0" style="transform: translateY(50%);" id="collapse_e823u">
+                                                            <div class="tw-flex bg-color-white tw-rounded-xl tw-items-center tw-space-x-1 tw-overflow-hidden tw-px-4">
+                                                                <svg style="fill:currentColor;" class="svg-fluent_search tw-w-4 tw-h-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                                    <path d="M20.5 6C12.515556 6 6 12.515562 6 20.5C6 28.484438 12.515556 35 20.5 35C23.773158 35 26.788919 33.893018 29.220703 32.050781L38.585938 41.414062 A 2.0002 2.0002 0 1 0 41.414062 38.585938L32.050781 29.220703C33.893017 26.788918 35 23.773156 35 20.5C35 12.515562 28.484444 6 20.5 6 z M 20.5 10C26.322685 10 31 14.677319 31 20.5C31 23.295711 29.914065 25.820601 28.148438 27.697266 A 2.0002 2.0002 0 0 0 27.701172 28.144531C25.824103 29.912403 23.29771 31 20.5 31C14.677315 31 10 26.322681 10 20.5C10 14.677319 14.677315 10 20.5 10 z"></path>
+                                                                </svg>
+                                                                <input value="" class="tw-flex-1 outline-none tw-outline-none bg-transparent tw-px-2 tw-py-3 ff-jost tw-text-sm tw-placeholder-black tw-placeholder-opacity-40" type="" name="search" placeholder="Search...">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tw-relative tw-flex">
+                                                    <a class="tw-flex tw-justify-center tw-items-center" href="/pages/cart.html">
+                                                        <svg style="fill:currentColor;" class="svg-shopping-cart tw-w-6 tw-h-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                            <path d="M3.5 6 A 1.50015 1.50015 0 1 0 3.5 9L6.2558594 9C6.9837923 9 7.5905865 9.5029243 7.7285156 10.21875L8.0234375 11.763672C8.0244746 11.769537 8.0242827 11.77539 8.0253906 11.78125L11.251953 28.716797C11.835953 31.778797 14.521672 34 17.638672 34L36.361328 34C39.478328 34 42.165047 31.778797 42.748047 28.716797L45.974609 11.779297C46.057609 11.340297 45.94125 10.887969 45.65625 10.542969C45.37125 10.198969 44.947 10 44.5 10L10.740234 10L10.675781 9.6582031C10.272657 7.5455321 8.4069705 6 6.2558594 6L3.5 6 z M 20 36 A 3 3 0 0 0 20 42 A 3 3 0 0 0 20 36 z M 34 36 A 3 3 0 0 0 34 42 A 3 3 0 0 0 34 36 z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div data-value="" class="badge-e928 ff-jost-medium tw-text-xs tw-px-2 tw-py-1 tw-bg-red-400 rounded-full tw-flex tw-justify-center tw-items-center tw-rounded-full tw-absolute -tw-bottom-1/2 -tw-right-1/2"></div>
+                                                </div>
+                                                <svg style="fill:currentColor;" class="svg-menu md:tw-hidden tw-w-6 tw-h-6 tw-cursor-pointer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" onclick="layout_main_toggle_menu()">
+                                                    <path d="M3 7 A 1.0001 1.0001 0 1 0 3 9L27 9 A 1.0001 1.0001 0 1 0 27 7L3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16L27 16 A 1.0001 1.0001 0 1 0 27 14L3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23L27 23 A 1.0001 1.0001 0 1 0 27 21L3 21 z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="back-head-ed2 blur-e2h -zi-1 tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-bg-cover tw-bg-center tw-bg-no-repeat tw-bg-fixed" style="min-height: 10px; background-image: url(/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg);filter: blur(50px);"></div> -->
+                        </div>
+                    </div>
+                    <section class="tw-bg-red-400- tw-bg-opacity-40 tw-overflow-hidden">
+                        <div class="component-banner-op-ew29 tw-px-6 md:tw-flex tw-items-center tw-space-x-4 tw-bg-red-400- container">
+                            <div class="md:tw-w-1/2 tw-space-y-4 md:tw-space-y-7 tw-relative zi-2 tw-flex tw-flex-col tw-items-center md:tw-items-start tw-text-center md:tw-text-left">
+                                <h1 class="ff-poppins-black tw-text-3xl md:tw-text-4xl tw-w-10/12">Laissez le vent donner des ailes à votre valise</h1>
+                                <p class="ff-jost text-base md:text-lg">Embarquez pour un voyage empreint de légèreté et de liberté avec notre bannière de vent de valise. Lorsque le vent caresse votre bagage, il lui insuffle la magie du voyage. Suivez les courants aériens vers des destinations fascinantes et laissez-vous porter par l'excitation de l'inconnu.</p>
+                                <div class="tw-flex tw-space-x-4">
+                                    <a href="/pages/contact.html" class="
+        tw-inline-block
+        tw-border-2
+    
+        tw-border-white tw-border-opacity-30
+        tw-bg-white tw-bg-opacity-20 hover:tw-bg-opacity-100
+    
+    
+    tw-px-6 tw-py-2
+    tw-rounded-full
+    tw-transition-all tw-duration-200
+    ff-jost-semibold tw-text-center
+">Nous contacter</a>
+                                    <a href="/pages/catalog.html" class="
+        tw-inline-block
+        tw-border-2
+    
+    
+        suitcase-border-color-dark-15 suitcase-border-color-opacity-30
+        suitcase-bg-color-dark-15 hover:suitcase-bg-color-default suitcase-bg-color-opacity-20 hover:suitcase-bg-color-opacity-100
+    
+    tw-px-6 tw-py-2
+    tw-rounded-full
+    tw-transition-all tw-duration-200
+    ff-jost-semibold tw-text-center
+">Voir plus</a>
+                                </div>
+                            </div>
+                            <div class="icon-content-e29 tw-w-full tw-mt-10 md:tw-mt-0 tw-flex-1 tw-flex tw-justify-center sm:tw-self-stretch tw-relative zi-1">
+                                <div class="tw-w-full">
+                                    <div class="ico-d2j tw-w-full tw-h-full tw-relative zi-1">
+                                        <svg class="tw-absolute tw-top-0 tw-bottom-0 tw-my-auto tw-h-full tw-w-full" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 690">
+                                            <pattern id="myPattern" width="100%" height="100%" patternContentUnits="objectBoundingBox">
+                                                <image xlink:href="/assets/img/30/american-green-travel-ji5XMfO3dXY-unsplash.jpg" width="1" height="1" preserveAspectRatio="xMidYMid slice"></image>
+                                            </pattern>
+                                            <path d="M334.07,5.51C147.29,15.75-17.67,187,12.87,288.21,38.78,374.15,196,378.12,201.05,449.07,207,531.89-3.94,572.26,5.29,622.3c13.29,72,477,135,638.1-40.92,17.73-19.38,57.69-63,50.83-115.18-10-75.9-107.73-83-139.52-167.52-33-87.81,51.33-136.45,15.14-205.6C534.14,24.87,414.83,1.09,334.07,5.51Z" transform="translate(-5 -5)" fill="url(#myPattern)"></path>
+                                        </svg>
+                                        <svg class="tw-absolute tw-top-0 tw-bottom-0 tw-my-auto tw-h-full tw-w-full" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 690">
+                                            <pattern id="myPattern0" width="100%" height="100%" patternContentUnits="objectBoundingBox">
+                                                <image xlink:href="/assets/img/30/jefferson-sees-KyeqngdgbC8-unsplash.jpg" width="1" height="1" preserveAspectRatio="xMidYMid slice"></image>
+                                            </pattern>
+                                            <path d="M17.88,52.5C62.65-9.08,225.22-11.34,332.74,49c93.31,52.35,94.94,123.65,178,136.58,66.36,10.33,98.35-30.08,136.9-9.69C697.85,202.44,714,308.4,667.15,379.42c-62.31,94.44-198.44,70.09-236.63,160.38-22.62,53.49,16.28,83-10.75,116.31C368.67,719,154.2,706.3,89.26,612.94,25.33,521,161,429.49,92.2,298.35,63.56,243.79,11.92,206,6.15,123,4.32,96.62,2.7,73.38,17.88,52.5Z" transform="translate(-5 -5)" fill="url(#myPattern0)"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-component-title-proxim-hover-active="1" class="tw-mt-20 overflow-x-hidden">
+                        <div class="container-md tw-px-3 md:tw-px-3 tw-mb-9">
+                            <div class="component-title-proxim-w29jn tw-flex tw-items-center justify-between tw-space-x-3 md:tw-space-x-5" data-type="left" data-scroll="body-2he" data-scroll-percent="58">
+                                <span class="tw-flex-1 color-white color-opacity-20"></span>
+                                <h3 class="tw-text-xl md:tw-text-2xl lg:tw-text-3xl ff-poppins-black text-center suitcase-color-dark-40">Vos valises, selon le type que vous cherchez</h3>
+                                <span class="tw-flex-1 color-white color-opacity-20"></span>
+                            </div>
+                        </div>
+                        <div class="container-lg">
+                            <div class="tw-flex tw-flex-wrap" data-parent-card-two="">
+                                <div class="tw-w-full sm:tw-w-1/2 tw-p-3">
+                                    <div class="component-cat-two-w1h md:tw-flex tw-items-start md:tw-space-x-7 tw-space-y-5 md:tw-space-y-0" data-scroll="body-2he" data-scroll-percent="70" data-scroll-unique-="">
+                                        <div class="img-w2w ratio-1/1 tw-rounded-full tw-bg-cover tw-bg-no-repeat tw-bg-center tw-w-1/2 sm:tw-w-1/3" style="background-image: url(/assets/img/30/sun-lingyan-q-4fbq8pUO4-unsplash.jpg);"></div>
+                                        <div class="content-r3w tw-space-y-5 tw-flex-1">
+                                            <h2 class="ff-jost-bold tw-text-xl sm:tw-text-2xl">Valises rigides</h2>
+                                            <p class="ff-jost-medium tw-opacity-70 tw-text-sm sm:tw-text-base">Les valises rigides sont solides, faites de plastique ou de métal. Elles sont résistantes et protègent vos affaires en cas d'impact.</p>
+                                            <a href="/pages/catalog.html" class="
+        tw-inline-block
+        tw-border-2
+    
+        tw-border-white tw-border-opacity-30
+        tw-bg-white tw-bg-opacity-20 hover:tw-bg-opacity-100
+    
+    
+    tw-px-6 tw-py-2
+    tw-rounded-full
+    tw-transition-all tw-duration-200
+    ff-jost-semibold tw-text-center
+">Voir plus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tw-w-full sm:tw-w-1/2 tw-p-3">
+                                    <div class="component-cat-two-w1h md:tw-flex tw-items-start md:tw-space-x-7 tw-space-y-5 md:tw-space-y-0" data-scroll="body-2he" data-scroll-percent="70" data-scroll-unique-="" data-scroll-time="200">
+                                        <div class="img-w2w ratio-1/1 tw-rounded-full tw-bg-cover tw-bg-no-repeat tw-bg-center tw-w-1/2 sm:tw-w-1/3" style="background-image: url(/assets/img/30/jed-owen-PpzBE1hWeGI-unsplash.jpg);"></div>
+                                        <div class="content-r3w tw-space-y-5 tw-flex-1">
+                                            <h2 class="ff-jost-bold tw-text-xl sm:tw-text-2xl">Valises souples</h2>
+                                            <p class="ff-jost-medium tw-opacity-70 tw-text-sm sm:tw-text-base">Les valises souples sont fabriquées à partir de matériaux souples, tels que le nylon ou le polyester. Elles sont plus légères et plus maniables que les valises rigides.</p>
+                                            <a href="/pages/catalog.html" class="
+        tw-inline-block
+        tw-border-2
+    
+        tw-border-white tw-border-opacity-30
+        tw-bg-white tw-bg-opacity-20 hover:tw-bg-opacity-100
+    
+    
+    tw-px-6 tw-py-2
+    tw-rounded-full
+    tw-transition-all tw-duration-200
+    ff-jost-semibold tw-text-center
+">Voir plus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tw-w-full sm:tw-w-1/2 tw-p-3">
+                                    <div class="component-cat-two-w1h md:tw-flex tw-items-start md:tw-space-x-7 tw-space-y-5 md:tw-space-y-0" data-scroll="body-2he" data-scroll-percent="70" data-scroll-unique-="" data-scroll-time="200">
+                                        <div class="img-w2w ratio-1/1 tw-rounded-full tw-bg-cover tw-bg-no-repeat tw-bg-center tw-w-1/2 sm:tw-w-1/3" style="background-image: url(/assets/img/30/pexels-andrew-neel-13145853.jpg);"></div>
+                                        <div class="content-r3w tw-space-y-5 tw-flex-1">
+                                            <h2 class="ff-jost-bold tw-text-xl sm:tw-text-2xl">Valises à roulettes</h2>
+                                            <p class="ff-jost-medium tw-opacity-70 tw-text-sm sm:tw-text-base">Les valises à roulettes sont équipées de roulettes qui permettent de les transporter facilement. Elles sont disponibles en version rigide et souple.</p>
+                                            <a href="/pages/catalog.html" class="
+        tw-inline-block
+        tw-border-2
+    
+        tw-border-white tw-border-opacity-30
+        tw-bg-white tw-bg-opacity-20 hover:tw-bg-opacity-100
+    
+    
+    tw-px-6 tw-py-2
+    tw-rounded-full
+    tw-transition-all tw-duration-200
+    ff-jost-semibold tw-text-center
+">Voir plus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tw-w-full sm:tw-w-1/2 tw-p-3">
+                                    <div class="component-cat-two-w1h md:tw-flex tw-items-start md:tw-space-x-7 tw-space-y-5 md:tw-space-y-0" data-scroll="body-2he" data-scroll-percent="70" data-scroll-unique-="">
+                                        <div class="img-w2w ratio-1/1 tw-rounded-full tw-bg-cover tw-bg-no-repeat tw-bg-center tw-w-1/2 sm:tw-w-1/3" style="background-image: url(/assets/img/30/american-green-travel-XBbZ5Wn1CnE-unsplash.jpg);"></div>
+                                        <div class="content-r3w tw-space-y-5 tw-flex-1">
+                                            <h2 class="ff-jost-bold tw-text-xl sm:tw-text-2xl">Valises cabine</h2>
+                                            <p class="ff-jost-medium tw-opacity-70 tw-text-sm sm:tw-text-base">Les valises cabine sont suffisamment petites pour être emportées à bord de l'avion en tant que bagage à main. Elles sont idéales pour les voyages courts ou pour les personnes qui ne veulent pas s'enregistrer de bagages.</p>
+                                            <a href="/pages/catalog.html" class="
+        tw-inline-block
+        tw-border-2
+    
+        tw-border-white tw-border-opacity-30
+        tw-bg-white tw-bg-opacity-20 hover:tw-bg-opacity-100
+    
+    
+    tw-px-6 tw-py-2
+    tw-rounded-full
+    tw-transition-all tw-duration-200
+    ff-jost-semibold tw-text-center
+">Voir plus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="component-banner-picta-ww82h tw-px-4 tw-mt-20">
+                        <div class="tw-relative zi-1 overflow-hidden tw-rounded-3xl bg-color-black bg-color-opacity-80" data-scroll="body-2he" data-scroll-percent="55" data-scroll-time-="200">
+                            <div class="container-39n container tw-py-20">
+                                <div class="content-e2 md:tw-flex">
+                                    <div class="md:tw-w-1/3 tw-p-3">
+                                        <div class="
+    component-card-define-e29
+    bg-color-black bg-color-opacity-50
+    tw-border-b-4
+    suitcase-border-color-light-15 suitcase-border-color-opacity-30
+    tw-rounded-2xl tw-p-5
+">
+                                            <div class="tw-flex tw-justify-end tw-relative zi-1">
+                                                <div class="suitcase-bg-color-light-15 color-black tw-shadow ratio-1/1 tw-w-1/6 md:tw-w-1/4 lg:tw-w-1/6 md:tw-p-1.5 lg:tw-p-2 xl:tw-p-3 tw-rounded-2xl tw-flex tw-justify-center tw-items-center tw-mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                        <path d="M8.5 6C6.5850452 6 5 7.5850452 5 9.5L5 26.5C5 28.414955 6.5850452 30 8.5 30L39.5 30C41.414955 30 43 28.414955 43 26.5L43 9.5C43 7.5850452 41.414955 6 39.5 6L8.5 6 z M 11 9L37 9C37 10.66 38.34 12 40 12L40 24C38.34 24 37 25.34 37 27L11 27C11 25.34 9.66 24 8 24L8 12C9.66 12 11 10.66 11 9 z M 24 11C22.041667 11 20.395258 11.984107 19.412109 13.335938C18.428961 14.687767 18 16.352273 18 18C18 19.647727 18.428961 21.312233 19.412109 22.664062C20.395258 24.015893 22.041667 25 24 25C25.958333 25 27.604742 24.015894 28.587891 22.664062C29.571039 21.312233 30 19.647727 30 18C30 16.352273 29.571039 14.687767 28.587891 13.335938C27.604742 11.984106 25.958333 11 24 11 z M 24 14C25.041666 14 25.645259 14.390893 26.162109 15.101562C26.67896 15.812233 27 16.897727 27 18C27 19.102273 26.67896 20.187767 26.162109 20.898438C25.645259 21.609107 25.041666 22 24 22C22.958334 22 22.354741 21.609106 21.837891 20.898438C21.32104 20.187767 21 19.102273 21 18C21 16.897727 21.32104 15.812232 21.837891 15.101562C22.354741 14.390894 22.958334 14 24 14 z M 12 16 A 2 2 0 0 0 12 20 A 2 2 0 0 0 12 16 z M 36 16 A 2 2 0 0 0 36 20 A 2 2 0 0 0 36 16 z M 8.0449219 31.998047C8.2659219 33.653047 9.6334219 34.938047 11.357422 34.998047C22.232422 35.374047 30.282422 38.997359 34.607422 40.943359C35.377422 41.290359 36.039891 41.586547 36.587891 41.810547C36.890891 41.934547 37.208391 41.996094 37.525391 41.996094C38.009391 41.996094 38.488344 41.853172 38.902344 41.576172C39.589344 41.115172 40 40.343672 40 39.513672L40 32L37 32L37 36C35.864686 36 34.890507 36.633276 34.380859 37.560547C29.631178 35.463628 21.809525 32.357502 11.460938 32C11.458937 32 11.458031 31.998047 11.457031 31.998047L8.0449219 31.998047 z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="image-e82h tw-absolute tw-right-0 tw-bottom-0 tw-w-full tw-h-20 tw-rounded-lg -zi-1 tw-transform tw-translate-y-1/2 tw-bg-no-repeat tw-bg-cover tw-bg-center bg-color-black-10" style="background-image: url(/assets/img/30/dmytro-demidko-eBWzFKahEaU-unsplash.jpg);"></div>
+                                            </div>
+                                            <div class="tw-mt-16 color-white tw-space-y-3">
+                                                <h5 class="ff-jost-semibold tw-text-2xl">Garantie de remboursement</h5>
+                                                <p class="tw- ff-jost opacity-70">Achetez en toute confiance grâce à notre garantie de remboursement intégral.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md:tw-w-1/3 tw-p-3">
+                                        <div class="
+    component-card-define-e29
+    bg-color-black bg-color-opacity-50
+    tw-border-b-4
+    suitcase-border-color-light-15 suitcase-border-color-opacity-30
+    tw-rounded-2xl tw-p-5
+">
+                                            <div class="tw-flex tw-justify-end tw-relative zi-1">
+                                                <div class="suitcase-bg-color-light-15 color-black tw-shadow ratio-1/1 tw-w-1/6 md:tw-w-1/4 lg:tw-w-1/6 md:tw-p-1.5 lg:tw-p-2 xl:tw-p-3 tw-rounded-2xl tw-flex tw-justify-center tw-items-center tw-mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                        <path d="M24 4C12.972066 4 4 12.972074 4 24C4 35.027926 12.972066 44 24 44C35.027934 44 44 35.027926 44 24C44 12.972074 35.027934 4 24 4 z M 24 7C33.406615 7 41 14.593391 41 24C41 33.406609 33.406615 41 24 41C14.593385 41 7 33.406609 7 24C7 14.593391 14.593385 7 24 7 z M 22.476562 11.978516 A 1.50015 1.50015 0 0 0 21 13.5L21 24.5 A 1.50015 1.50015 0 0 0 21.439453 25.560547L26.439453 30.560547 A 1.50015 1.50015 0 1 0 28.560547 28.439453L24 23.878906L24 13.5 A 1.50015 1.50015 0 0 0 22.476562 11.978516 z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="image-e82h tw-absolute tw-right-0 tw-bottom-0 tw-w-full tw-h-20 tw-rounded-lg -zi-1 tw-transform tw-translate-y-1/2 tw-bg-no-repeat tw-bg-cover tw-bg-center bg-color-black-10" style="background-image: url(/assets/img/30/andrik-langfield-0rTCXZM7Xfo-unsplash.jpg);"></div>
+                                            </div>
+                                            <div class="tw-mt-16 color-white tw-space-y-3">
+                                                <h5 class="ff-jost-semibold tw-text-2xl">Service client 24h/24 et 7j/7</h5>
+                                                <p class="tw- ff-jost opacity-70">Notre équipe est disponible en permanence pour répondre à vos questions et résoudre vos problèmes, à tout moment.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md:tw-w-1/3 tw-p-3">
+                                        <div class="
+    component-card-define-e29
+    bg-color-black bg-color-opacity-50
+    tw-border-b-4
+    suitcase-border-color-light-15 suitcase-border-color-opacity-30
+    tw-rounded-2xl tw-p-5
+">
+                                            <div class="tw-flex tw-justify-end tw-relative zi-1">
+                                                <div class="suitcase-bg-color-light-15 color-black tw-shadow ratio-1/1 tw-w-1/6 md:tw-w-1/4 lg:tw-w-1/6 md:tw-p-1.5 lg:tw-p-2 xl:tw-p-3 tw-rounded-2xl tw-flex tw-justify-center tw-items-center tw-mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                                                        <path d="M11.5 2C5.1664891 2 0 7.1664939 0 13.5C0 15.932493 0.76684074 18.189157 2.0644531 20.050781 A 1.50015 1.50015 0 0 0 2 20.5L2 31.5C2 33.967501 4.0324991 36 6.5 36L7.2148438 36C7.8742368 38.298413 10.000264 40 12.5 40C14.999736 40 17.125763 38.298413 17.785156 36L30.214844 36C30.874237 38.298413 33.000264 40 35.5 40C37.999736 40 40.125763 38.298413 40.785156 36L41.5 36C43.967501 36 46 33.967501 46 31.5L46 25.136719C46 24.505308 45.866775 23.885098 45.613281 23.3125 A 1.50015 1.50015 0 0 0 45.611328 23.310547L42.662109 16.673828L42.662109 16.671875C41.941923 15.05033 40.324799 14 38.550781 14L31.949219 14C31.694299 11.766623 29.796595 10 27.5 10L22.451172 10C20.964206 5.3689287 16.613775 2 11.5 2 z M 11.5 5C16.212192 5 20 8.7878114 20 13.5C20 18.212189 16.212192 22 11.5 22C6.7878084 22 3 18.212189 3 13.5C3 8.7878114 6.7878084 5 11.5 5 z M 11.476562 6.9785156 A 1.50015 1.50015 0 0 0 10 8.5L10 13.5 A 1.50015 1.50015 0 0 0 10.439453 14.560547L12.439453 16.560547 A 1.50015 1.50015 0 1 0 14.560547 14.439453L13 12.878906L13 8.5 A 1.50015 1.50015 0 0 0 11.476562 6.9785156 z M 22.974609 13L27.5 13C28.346499 13 29 13.653501 29 14.5L29 15.5L29 33L17.785156 33C17.125763 30.701587 14.999736 29 12.5 29C10.000264 29 7.8742368 30.701587 7.2148438 33L6.5 33C5.6535009 33 5 32.346499 5 31.5L5 22.972656C6.8516945 24.248436 9.090002 25 11.5 25C17.833511 25 23 19.833506 23 13.5C23 13.33138 22.981858 13.16689 22.974609 13 z M 32 17L38.550781 17C39.148248 17 39.677843 17.345067 39.919922 17.890625L41.746094 22L32 22L32 17 z M 32 25L42.986328 25C42.990597 25.045531 43 25.091276 43 25.136719L43 31.5C43 32.346499 42.346499 33 41.5 33L40.785156 33C40.125763 30.701587 37.999736 29 35.5 29C34.174012 29 32.953662 29.479254 32 30.271484L32 25 z M 12.5 32C13.848747 32 14.91448 33.032799 14.986328 34.361328 A 1.50015 1.50015 0 0 0 14.986328 34.638672C14.91448 35.967201 13.848747 37 12.5 37C11.151253 37 10.08552 35.967201 10.013672 34.638672 A 1.50015 1.50015 0 0 0 10.013672 34.361328C10.08552 33.032799 11.151253 32 12.5 32 z M 35.5 32C36.896406 32 38 33.103594 38 34.5C38 35.896406 36.896406 37 35.5 37C34.103594 37 33 35.896406 33 34.5C33 33.103594 34.103594 32 35.5 32 z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="image-e82h tw-absolute tw-right-0 tw-bottom-0 tw-w-full tw-h-20 tw-rounded-lg -zi-1 tw-transform tw-translate-y-1/2 tw-bg-no-repeat tw-bg-cover tw-bg-center bg-color-black-10" style="background-image: url(/assets/img/30/rosebox-BFdSCxmqvYc-unsplash.jpg);"></div>
+                                            </div>
+                                            <div class="tw-mt-16 color-white tw-space-y-3">
+                                                <h5 class="ff-jost-semibold tw-text-2xl">Livraison gratuite</h5>
+                                                <p class="tw- ff-jost opacity-70">Profitez de la livraison gratuite pour recevoir votre valise chez vous, sans frais supplémentaires.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-c3g -zi-1 tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-bg-no-repeat tw-bg-cover tw-bg-center " style="background-image: url(/assets/img/30/ash-edmonds-0aWZdK8nK2I-unsplash.jpg);"></div>
+                        </div>
+                    </div>
+                    <section data-component-title-proxim-hover-active="1" class="tw-mt-24">
+                        <div class="container-md tw-px-3 md:tw-px-3 tw-mb-9">
+                            <div class="component-title-proxim-w29jn tw-flex tw-items-center justify-between tw-space-x-3 md:tw-space-x-5" data-type="left" data-scroll="body-2he" data-scroll-percent="58">
+                                <span class="tw-flex-1 color-white color-opacity-20"></span>
+                                <h3 class="tw-text-xl md:tw-text-2xl lg:tw-text-3xl ff-poppins-black text-center suitcase-color-dark-40">Divers articles disponibles dans notre catalogue</h3>
+                                <span class="tw-flex-1 color-white color-opacity-20"></span>
+                            </div>
+                        </div>
+                        <div class="container-lg">
+                            <div class="parent-8e3h mt-7 tw-flex tw-flex-wrap tw-justify-center tw-items-end">
+                                <div class="component-card-sorta-ew92 tw-w-full- tw-w-full sm:tw-w-1/2 md:tw-w-1/3 lg:tw-w-1/4 tw-p-1.5 sm:tw-p-3">
+                                    <div class="tw-relative zi-1">
+                                        <div class="content-2he">
+                                            <div class="tw-overflow-hidden tw-px-5 tw-block">
+                                                <a href="/pages/single-page.html">
+                                                    <img class="tw-rounded-2xl bg-color-white-30 bg-color-opacity-20-" src="/assets/img/original/premium_photo-1684407616508-b9e82c8bc8a0.jpg" style="min-height: 5%;" alt="" loading="lazy">
+                                                </a>
+                                            </div>
+                                            <div class="tw-px-5 tw-pb-5 tw-mt-2">
+                                                <div class="badge-e2e2 tw-mb-3 tw-hidden">badge</div>
+                                                <a href="/pages/single-page.html" class="title-ed9e32 ff-jost-medium tw-text-xl tw-inline-block hover:suitcase-color-dark-20">Samsonite S'Cure Spinner</a>
+                                                <div class="tw-mt-3 tw-flex tw-justify-between tw-space-x-3 tw-items-center">
+                                                    <span class="ff-jost-semibold">$249.99</span>
+                                                    <span class="ff-jost tw-opacity-70 tw-line-through ">$299.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back-s2h bg-color-white bg-color-opacity-20"></div>
+                                    </div>
+                                </div>
+                                <div class="component-card-sorta-ew92 tw-w-full- tw-w-full sm:tw-w-1/2 md:tw-w-1/3 lg:tw-w-1/4 tw-p-1.5 sm:tw-p-3">
+                                    <div class="tw-relative zi-1">
+                                        <div class="content-2he">
+                                            <div class="tw-overflow-hidden tw-px-5 tw-block">
+                                                <a href="/pages/single-page.html">
+                                                    <img class="tw-rounded-2xl bg-color-white-30 bg-color-opacity-20-" src="/assets/img/original/sun-lingyan--ZUHytrj4Ic-unsplash.jpg" style="min-height: 5%;" alt="" loading="lazy">
+                                                </a>
+                                            </div>
+                                            <div class="tw-px-5 tw-pb-5 tw-mt-2">
+                                                <div class="badge-e2e2 tw-mb-3 tw-hidden">badge</div>
+                                                <a href="/pages/single-page.html" class="title-ed9e32 ff-jost-medium tw-text-xl tw-inline-block hover:suitcase-color-dark-20">Delsey Chatelet Hard+ Spinner</a>
+                                                <div class="tw-mt-3 tw-flex tw-justify-between tw-space-x-3 tw-items-center">
+                                                    <span class="ff-jost-semibold">$199.99</span>
+                                                    <span class="ff-jost tw-opacity-70 tw-line-through ">$249.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back-s2h bg-color-white bg-color-opacity-20"></div>
+                                    </div>
+                                </div>
+                                <div class="component-card-sorta-ew92 tw-w-full- tw-w-full sm:tw-w-1/2 md:tw-w-1/3 lg:tw-w-1/4 tw-p-1.5 sm:tw-p-3">
+                                    <div class="tw-relative zi-1">
+                                        <div class="content-2he">
+                                            <div class="tw-overflow-hidden tw-px-5 tw-block">
+                                                <a href="/pages/single-page.html">
+                                                    <img class="tw-rounded-2xl bg-color-white-30 bg-color-opacity-20-" src="/assets/img/original/sun-lingyan-q-4fbq8pUO4-unsplash.jpg" style="min-height: 5%;" alt="" loading="lazy">
+                                                </a>
+                                            </div>
+                                            <div class="tw-px-5 tw-pb-5 tw-mt-2">
+                                                <div class="badge-e2e2 tw-mb-3 tw-hidden">badge</div>
+                                                <a href="/pages/single-page.html" class="title-ed9e32 ff-jost-medium tw-text-xl tw-inline-block hover:suitcase-color-dark-20">Rimowa Classic Cabin</a>
+                                                <div class="tw-mt-3 tw-flex tw-justify-between tw-space-x-3 tw-items-center">
+                                                    <span class="ff-jost-semibold">$849.99</span>
+                                                    <span class="ff-jost tw-opacity-70 tw-line-through ">$899.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back-s2h bg-color-white bg-color-opacity-20"></div>
+                                    </div>
+                                </div>
+                                <div class="component-card-sorta-ew92 tw-w-full- tw-w-full sm:tw-w-1/2 md:tw-w-1/3 lg:tw-w-1/4 tw-p-1.5 sm:tw-p-3">
+                                    <div class="tw-relative zi-1">
+                                        <div class="content-2he">
+                                            <div class="tw-overflow-hidden tw-px-5 tw-block">
+                                                <a href="/pages/single-page.html">
+                                                    <img class="tw-rounded-2xl bg-color-white-30 bg-color-opacity-20-" src="/assets/img/original/pexels-mikhail-nilov-7820616.jpg" style="min-height: 5%;" alt="" loading="lazy">
+                                                </a>
+                                            </div>
+                                            <div class="tw-px-5 tw-pb-5 tw-mt-2">
+                                                <div class="badge-e2e2 tw-mb-3 tw-hidden">badge</div>
+                                                <a href="/pages/single-page.html" class="title-ed9e32 ff-jost-medium tw-text-xl tw-inline-block hover:suitcase-color-dark-20">Travelpro Maxlite 5</a>
+                                                <div class="tw-mt-3 tw-flex tw-justify-between tw-space-x-3 tw-items-center">
+                                                    <span class="ff-jost-semibold">$139.99</span>
+                                                    <span class="ff-jost tw-opacity-70 tw-line-through ">$159.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back-s2h bg-color-white bg-color-opacity-20"></div>
+                                    </div>
+                                </div>
+                                <div class="component-card-sorta-ew92 tw-w-full- tw-w-full sm:tw-w-1/2 md:tw-w-1/3 lg:tw-w-1/4 tw-p-1.5 sm:tw-p-3">
+                                    <div class="tw-relative zi-1">
+                                        <div class="content-2he">
+                                            <div class="tw-overflow-hidden tw-px-5 tw-block">
+                                                <a href="/pages/single-page.html">
+                                                    <img class="tw-rounded-2xl bg-color-white-30 bg-color-opacity-20-" src="/assets/img/original/pexels-max-rahubovskiy-6394556.jpg" style="min-height: 5%;" alt="" loading="lazy">
+                                                </a>
+                                            </div>
+                                            <div class="tw-px-5 tw-pb-5 tw-mt-2">
+                                                <div class="badge-e2e2 tw-mb-3 tw-hidden">badge</div>
+                                                <a href="/pages/single-page.html" class="title-ed9e32 ff-jost-medium tw-text-xl tw-inline-block hover:suitcase-color-dark-20">Briggs &amp; Riley Baseline</a>
+                                                <div class="tw-mt-3 tw-flex tw-justify-between tw-space-x-3 tw-items-center">
+                                                    <span class="ff-jost-semibold">$499.99</span>
+                                                    <span class="ff-jost tw-opacity-70 tw-line-through ">$549.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back-s2h bg-color-white bg-color-opacity-20"></div>
+                                    </div>
+                                </div>
+                                <div class="component-card-sorta-ew92 tw-w-full- tw-w-full sm:tw-w-1/2 md:tw-w-1/3 lg:tw-w-1/4 tw-p-1.5 sm:tw-p-3">
+                                    <div class="tw-relative zi-1">
+                                        <div class="content-2he">
+                                            <div class="tw-overflow-hidden tw-px-5 tw-block">
+                                                <a href="/pages/single-page.html">
+                                                    <img class="tw-rounded-2xl bg-color-white-30 bg-color-opacity-20-" src="/assets/img/original/pexels-kindel-media-8276908.jpg" style="min-height: 5%;" alt="" loading="lazy">
+                                                </a>
+                                            </div>
+                                            <div class="tw-px-5 tw-pb-5 tw-mt-2">
+                                                <div class="badge-e2e2 tw-mb-3 tw-hidden">badge</div>
+                                                <a href="/pages/single-page.html" class="title-ed9e32 ff-jost-medium tw-text-xl tw-inline-block hover:suitcase-color-dark-20">Tumi Alpha 3</a>
+                                                <div class="tw-mt-3 tw-flex tw-justify-between tw-space-x-3 tw-items-center">
+                                                    <span class="ff-jost-semibold">$649.99</span>
+                                                    <span class="ff-jost tw-opacity-70 tw-line-through ">$699.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back-s2h bg-color-white bg-color-opacity-20"></div>
+                                    </div>
+                                </div>
+                                <div class="component-card-sorta-ew92 tw-w-full- tw-w-full sm:tw-w-1/2 md:tw-w-1/3 lg:tw-w-1/4 tw-p-1.5 sm:tw-p-3">
+                                    <div class="tw-relative zi-1">
+                                        <div class="content-2he">
+                                            <div class="tw-overflow-hidden tw-px-5 tw-block">
+                                                <a href="/pages/single-page.html">
+                                                    <img class="tw-rounded-2xl bg-color-white-30 bg-color-opacity-20-" src="/assets/img/original/convertkit-iGXIjzloB2k-unsplash.jpg" style="min-height: 5%;" alt="" loading="lazy">
+                                                </a>
+                                            </div>
+                                            <div class="tw-px-5 tw-pb-5 tw-mt-2">
+                                                <div class="badge-e2e2 tw-mb-3 tw-hidden">badge</div>
+                                                <a href="/pages/single-page.html" class="title-ed9e32 ff-jost-medium tw-text-xl tw-inline-block hover:suitcase-color-dark-20">Victorinox Spectra Expandable</a>
+                                                <div class="tw-mt-3 tw-flex tw-justify-between tw-space-x-3 tw-items-center">
+                                                    <span class="ff-jost-semibold">$299.99</span>
+                                                    <span class="ff-jost tw-opacity-70 tw-line-through ">$329.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back-s2h bg-color-white bg-color-opacity-20"></div>
+                                    </div>
+                                </div>
+                                <div class="component-card-sorta-ew92 tw-w-full- tw-w-full sm:tw-w-1/2 md:tw-w-1/3 lg:tw-w-1/4 tw-p-1.5 sm:tw-p-3">
+                                    <div class="tw-relative zi-1">
+                                        <div class="content-2he">
+                                            <div class="tw-overflow-hidden tw-px-5 tw-block">
+                                                <a href="/pages/single-page.html">
+                                                    <img class="tw-rounded-2xl bg-color-white-30 bg-color-opacity-20-" src="/assets/img/original/oliur-1JNk998-g70-unsplash.jpg" style="min-height: 5%;" alt="" loading="lazy">
+                                                </a>
+                                            </div>
+                                            <div class="tw-px-5 tw-pb-5 tw-mt-2">
+                                                <div class="badge-e2e2 tw-mb-3 tw-hidden">badge</div>
+                                                <a href="/pages/single-page.html" class="title-ed9e32 ff-jost-medium tw-text-xl tw-inline-block hover:suitcase-color-dark-20">American Tourister Moonlight</a>
+                                                <div class="tw-mt-3 tw-flex tw-justify-between tw-space-x-3 tw-items-center">
+                                                    <span class="ff-jost-semibold">$79.99</span>
+                                                    <span class="ff-jost tw-opacity-70 tw-line-through ">$89.99</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back-s2h bg-color-white bg-color-opacity-20"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tw-flex tw-justify-center tw-mt-12 px-3">
+                            <a href="/pages/catalog.html" class="
+        tw-inline-block
+        tw-border-2
+    
+        tw-border-white tw-border-opacity-30
+        tw-bg-white tw-bg-opacity-20 hover:tw-bg-opacity-100
+    
+    
+    tw-px-6 tw-py-2 md:tw-px-8 md:tw-py-3
+    tw-rounded-full
+    tw-transition-all tw-duration-200
+    ff-jost-semibold md:tw-text-xl tw-text-center
+">Consultez notre catalogue pour plus de produit</a>
+                        </div>
+                    </section>
+                    <footer class="component-footer-second-e2jn tw-mt-10 ff-jost">
+                        <div class=" md:tw-container md:tw-mx-auto tw-p-3 md:tw-p-5">
+                            <div class="bg-color-white bg-color-opacity-40 tw-rounded-2xl tw-px-4 tw-py-7">
+                                <div class="tw-flex tw-space-x-3">
+                                    <div class="tw-text-center tw-px-3 sm:tw-px-5 md:tw-px-7 lg:tw-px-10" style="writing-mode: sideways-lr;text-transform: uppercase;"><a class="tw-text-2xl sm:tw-text-3xl ff-poppins-bold" href="/pages/home.html">suitcase</a></div>
+                                    <div class="tw-flex-1 tw-flex tw-flex-wrap tw-justify-around">
+                                        <div class="components-lists-main-w9u12 tw-w-full sm:tw-w-1/2 md:tw-w-1/3 tw-pb-7 md:tw-pb-0">
+                                            <div class="title-e82yh ff-jost-semibold fs-6">Navigation</div>
+                                            <div class="list-s82h px-md-1 px-lg-2 tw-flex tw-flex-col tw-space-y-2">
+                                                <a class="def-e2d" href="/pages/home.html">Accueil</a>
+                                                <a class="def-e2d" href="/pages/catalog.html">Catalogue</a>
+                                                <a class="def-e2d" href="/pages/contact.html">Contact</a>
+                                                <a class="def-e2d" href="/pages/about.html">À propos</a>
+                                            </div>
+                                        </div>
+                                        <div class="components-lists-main-w9u12 tw-w-full sm:tw-w-1/2 md:tw-w-1/3 tw-pb-7 md:tw-pb-0">
+                                            <div class="title-e82yh ff-jost-semibold fs-6">Supports</div>
+                                            <div class="list-s82h px-md-1 px-lg-2 tw-flex tw-flex-col tw-space-y-2">
+                                                <a class="def-e2d" href="/pages/faq.html">FAQ</a>
+                                                <a class="def-e2d" href="/pages/cart.html">Pannier</a>
+                                                <a class="def-e2d" href="/pages/terms.html">Termes &amp; Condition d'utilisation</a>
+                                            </div>
+                                        </div>
+                                        <div class="components-lists-main-w9u12 tw-w-full sm:tw-w-1/2 md:tw-w-1/3">
+                                            <div class="title-e82yh ff-jost-semibold fs-6">Informations de contact</div>
+                                            <div class="list-s82h px-md-1 px-lg-2 tw-flex tw-flex-col tw-space-y-2">
+                                                <span class="ff-jost">
+                                                    Loalisez-nous:
+                                                    <a href="https://www.google.com/maps?q=-4.321705,15.312597" class="ff-jost">Kishasa C/XX Q/XX A/XX 22 - RDC</a>
+                                                </span>
+                                                <span class="ff-jost">
+                                                    Appelez-nous:
+                                                    <a href="tel:+243834937483" class="ff-jost">+243 834 937 483</a>
+                                                </span>
+                                                <span class="ff-jost">
+                                                    Email:
+                                                    <a href="mailto:suitcase@suit.com" class="ff-jost">suitcase@suit.com</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- <footer class="tw-mt-10 ff-jost" c-file="components/footers/main.html"></footer> -->
+                </div>
+                <div class="back-im-e8 tw-flex">
+                    <div class="bck-ew92 sm:rounded-2xl img-e92 tw-bg-center tw-bg-cover tw-bg-no-repeat" style="background-image: url(/assets/img/original/premium_photo-1681488270353-3da76d262fbf.jpg);"></div>
+                    <!-- <div class="bck-ew92 hidden sm:block sm:rounded-2xl tw-border-2 border-color-white border-color-opacity-60" style="box-shadow: inset 0 0px 7px 3px hsla(0, 100%, 100%, .5);"></div> -->
+                </div>
+            </div>
+        </div>
+        <div data-state="0" class="menu-e82 tw-flex
+        
+        md:tw-p-5 tw-w-11/12 sm:tw-w-1/2 md:tw-w-5/12
+        md:tw-hidden tw-items-center tw-justify-end tw-h-full tw-transition-all tw-duration-200 tw-z-10">
+            <div class="close-area-ww92 -zi-1 tw-w-full tw-h-full bg-color-black bg-color-opacity-20 tw-absolute tw-cursor-pointer" onclick="layout_main_toggle_menu();"></div>
+            <div class="container-e29n tw-h-full tw-my-auto tw-p-3
+            sm:tw-p-4 md:tw-p-5
+            
+            tw-w-full
+        tw-transition-all tw-duration-500">
+                <div class="tw-h-full bg-color-white bg-color-opacity-95 tw-rounded-2xl tw-overflow-hidden">
+                    <div class="tw-h-full tw-w-full tw-overflow-y-auto tw-overflow-hidden">
+                        <!--<div class="">menu</div>
+                    <button onclick="layout_main_toggle_menu()">Fermer menu</button>-->
+                        <div class="col-10  order-md-last offset-1 border border-3 py-3 px-3 rounded-3 bg-ligth">
+                            <div class="offcanvas-header py-3   d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="offcanvas-title text-center" id="offcanvasNavbarLightLabel"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onclick="layout_main_toggle_menu()">x</button>
+                            </div>
+                            <div class=" px-3 d-flex justify-content-between align-items-center mb-3 mt-3">
+                                <h5 class="offcanvas-title text-center fs-2" id="offcanvasNavbarLightLabel">Menu</h5>
+                                <a class="nav-link rounded-circle bg-ligth overflow-hidden  " href="#" style=""><img src="/assets/icons/shopping-cart.svg" alt="" width="30px"></a>
+                                <!-- <a class="nav-link rounded-circle bg-ligth overflow-hidden  "href="#" style=""><img src="assets/img/icons8_shopping_cart.svg" alt="" width="30px"></a> -->
+                            </div>
+                            <ul class="fw-bold  navbar-nav justify-content-end flex-grow-1 pe-3 rounded-3 border border-3 px-3 py-3">
+                                <li class="nav-item py-2 px-2 col-2">
+                                </li>
+                                <li class="nav-item py-2 px-2">
+                                    <a class="nav-link active " aria-current="page" href="/pages/home.html">Home</a>
+                                </li>
+                                <li class="nav-item py-2 px-2">
+                                    <a class="nav-link" href="/pages/catalogue.html">Catalogue</a>
+                                </li>
+                                <li class="nav-item py-2 px-2">
+                                    <a class="nav-link" href="/pages/contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item py-2 px-2">
+                                    <a class="nav-link" href="/pages/apropo.html">À propos</a>
+                                </li>
+                            </ul>
+                            <form method="" action="/pages/search.html" class="card p-2">
+                                <div class="input-group">
+                                    <input type="search" name="search" value="" class="form-control " placeholder="search">
+                                    <button type="submit" class="btn btn-primary">search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
